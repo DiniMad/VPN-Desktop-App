@@ -4,22 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:GlobVpn"
     mc:Ignorable="d"
     Title="MainWindow"
-    Height="350"
-    Width="525">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition
-                Width="25*"/>
-            <ColumnDefinition
-                Width="40*"/>
-            <ColumnDefinition
-                Width="35*"/>
-        </Grid.ColumnDefinitions>
-        <Viewbox Grid.Column="0" >
-            
-        </Viewbox>
-    </Grid>
+    Height="600"
+    Width="1050"
+    MinHeight="450"
+    MinWidth="800"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    SourceInitialized="Window_SourceInitialized">
+    <Window.Resources>
+    </Window.Resources>
+    <Border>
+        <Frame Source="Views/PrimaryPanel.xaml" NavigationUIVisibility="Hidden"/>
+    </Border>
 </Window>
