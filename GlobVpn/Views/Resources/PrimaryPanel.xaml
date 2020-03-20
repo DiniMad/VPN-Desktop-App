@@ -1,0 +1,195 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:vc="clr-namespace:GlobVpn.ValueConverters">
+
+    <Color x:Key="Purple">#a609f9</Color>
+    <Color x:Key="PurpleSlightLigh">#6200a0</Color>
+    <Color x:Key="PurpleDark">#42036e</Color>
+    <Color x:Key="Pink">#d061b9</Color>
+    <Color x:Key="PinkDark">#8347a9</Color>
+    <Color x:Key="Whitish">#eae7e7</Color>
+    <Color x:Key="WhiteDark">#dddddd</Color>
+    <Color x:Key="PurplePink">#c445cd</Color>
+
+    <SolidColorBrush x:Key="Text" Color="White"/>
+    <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource Purple}"/>
+    <SolidColorBrush x:Key="PinkDarkBrush" Color="{StaticResource PinkDark}"/>
+    <SolidColorBrush x:Key="WhitishBrush" Color="{StaticResource Whitish}"/>
+    <SolidColorBrush x:Key="WhiteDarkBrush" Color="{StaticResource WhiteDark}"/>
+    <SolidColorBrush x:Key="PurplePinkBrush" Color="{StaticResource PurplePink}"/>
+
+    <BitmapImage x:Key="MainWindowBackground" UriSource="Images/MainWindowBackground.png" />
+    <BitmapImage x:Key="UserAvatar" UriSource="Images/UserAvatar.png" />
+    <BitmapImage x:Key="Home" UriSource="Images/Home.png" />
+    <BitmapImage x:Key="EditProfile" UriSource="Images/EditProfile.png" />
+    <BitmapImage x:Key="Setting" UriSource="Images/Setting.png" />
+    <BitmapImage x:Key="FeedBack" UriSource="Images/FeedBack.png" />
+    <BitmapImage x:Key="Info" UriSource="Images/Info.png" />
+    <BitmapImage x:Key="Logout" UriSource="Images/Logout.png" />
+    <BitmapImage x:Key="Close" UriSource="Images/Close.png" />
+    <BitmapImage x:Key="Maximize" UriSource="Images/Maximize.png" />
+    <BitmapImage x:Key="Minimize" UriSource="Images/Minimize.png" />
+    <BitmapImage x:Key="MidleBoxBackground" UriSource="Images/MidleBoxBackGround.png" />
+
+    <vc:ConnectButtonIsCheckedToTextConverter x:Key="IsCheckedToTextConverter"/>
+
+    <Style x:Key="MainManuButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Width="85"
+                                Height="15"
+                                Orientation="Horizontal"
+                                Margin="0 8 0 0">
+                        <Image Source="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
+                            AncestorType={x:Type Button}},Path=Tag}"
+                               Width="10"
+                               Height="10"
+                               HorizontalAlignment="Left"
+                               Stretch="UniformToFill"/>
+                        <TextBlock Margin="5 0 0 0"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource Text}"
+                                   FontSize="8"
+                                   Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
+                            AncestorType={x:Type Button}},Path=Content}">
+                        </TextBlock>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To=".8" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="ConnectButton"
+           TargetType="{x:Type CheckBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Viewbox>
+                        <Border Height="100"
+								Width="100"
+								CornerRadius="50">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0,1"
+                                                     StartPoint="1,0">
+                                    <GradientStop Color="{StaticResource Pink}"
+                                                  Offset="1"/>
+                                    <GradientStop Color="{StaticResource Purple}"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border Height="85"
+									Width="85"
+									CornerRadius="50"
+									Background="#E9E7E8"
+									Padding="5">
+                                <Viewbox>
+                                    <StackPanel Height="40"
+                                                Width="85">
+                                        <Path
+											Width="24.303"
+											Fill="{StaticResource PurplePinkBrush}"
+											Data="F1 M10.269,11.298V1.883C10.269,0.844,11.113,0,12.152,0s1.883,0.844,1.883,1.883v9.415
+		c0,1.039-0.844,1.883-1.883,1.883S10.269,12.337,10.269,11.298z M19.616,2.761c-0.61-0.483-1.5-0.377-1.983,0.234
+		c-0.483,0.612-0.378,1.5,0.234,1.984c2.24,1.767,3.524,4.413,3.524,7.261c0,5.094-4.145,9.239-9.238,9.239
+		c-5.094,0-9.239-4.145-9.239-9.239c0-2.847,1.283-5.492,3.521-7.258c0.612-0.483,0.717-1.371,0.234-1.984
+		c-0.483-0.612-1.37-0.716-1.984-0.234C1.764,5.069,0.089,8.523,0.089,12.24c0,6.652,5.412,12.063,12.063,12.063
+		s12.063-5.412,12.063-12.063C24.215,8.521,22.538,5.067,19.616,2.761z"/>
+                                        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
+														 AncestorType={x:Type CheckBox}},
+														 Path=IsChecked,Converter={StaticResource IsCheckedToTextConverter}}"
+                                                   TextAlignment="Center"
+                                                   FontWeight="Bold"/>
+                                    </StackPanel>
+                                </Viewbox>
+                            </Border>
+                        </Border>
+                    </Viewbox>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasContent"
+                                 Value="true"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To=".8" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="WindowStateButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{StaticResource WhiteDarkBrush}"
+                            CornerRadius="10"
+                            Padding="15">
+                        <Image Source="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
+														 AncestorType={x:Type Button}},
+														 Path=Tag}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To=".8" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
