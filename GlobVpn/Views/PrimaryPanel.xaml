@@ -1,0 +1,260 @@
+﻿<Page x:Class="GlobVpn.Views.PrimaryPanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Title="PrimaryPanel"
+      d:DesignHeight="600"
+      d:DesignWidth="1050"
+      MinHeight="450"
+      MinWidth="800">
+    <Page.Resources>
+        <ResourceDictionary Source="Resources/PrimaryPanel.xaml" />
+    </Page.Resources>
+    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="22*"/>
+            <ColumnDefinition
+                Width="40*"/>
+            <ColumnDefinition
+                Width="36*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill"
+                            ImageSource="{StaticResource MainWindowBackground}"/>
+        </Grid.Background>
+        <Border Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Margin="0 2 0 0"
+                CornerRadius="0 80 0 0">
+            <Border.Background>
+                <LinearGradientBrush
+                    EndPoint="0,0"
+                    StartPoint=".8,0">
+                    <GradientStop
+                        Color="{StaticResource PurpleDark}"
+                        Offset="1"/>
+                    <GradientStop
+                        Color="{StaticResource PurpleSlightLigh}"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="8*"/>
+                    <RowDefinition
+                        Height="15*"/>
+                    <RowDefinition
+                        Height="50*"/>
+                    <RowDefinition
+                        Height="17*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="10*"/>
+                    <ColumnDefinition
+                        Width="80*"/>
+                    <ColumnDefinition
+                        Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox
+                    Grid.Column="1"
+                    Grid.Row="1">
+                    <Border
+                        Width="100"
+                        Height="100"
+                        CornerRadius="80,80,80,80"
+                        BorderBrush="{StaticResource PinkDarkBrush}"
+                        BorderThickness="4">
+                        <Border.Background>
+                            <ImageBrush
+                                Stretch="UniformToFill"
+                                ImageSource="{StaticResource UserAvatar}"/>
+                        </Border.Background>
+                    </Border>
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="0 10 0 0">
+                    <StackPanel
+                        Width="100"
+                        Height="170"
+                        HorizontalAlignment="Center">
+                        <TextBlock TextAlignment="Center"
+                                   Foreground="{StaticResource Text}">
+                            Welcome Samin
+                        </TextBlock>
+                        <Grid Width="85"
+                              Height="2"
+                              Margin="0 8 0 4"
+                              Background="{StaticResource PinkDarkBrush}"/>
+                        <Button Content="Home"
+                                Tag="{StaticResource Home}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                        <Button Content="Edit Profile"
+                                Tag="{StaticResource EditProfile}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                        <Button Content="Setting"
+                                Tag="{StaticResource Setting}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                        <Button Content="FeedBack"
+                                Tag="{StaticResource FeedBack}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                        <Button Content="Info"
+                                Tag="{StaticResource Info}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                        <Button Content="Logout"
+                                Tag="{StaticResource Logout}"
+                            Style="{DynamicResource MainManuButton}"
+                            />
+                    </StackPanel>
+                </Viewbox>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1"
+                    Grid.Row="2">
+            <Border.Background>
+                <ImageBrush Stretch="Fill"
+                            ImageSource="{StaticResource MidleBoxBackground}"/>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Row="1"
+                      Grid.Column="1">
+                    <Grid Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <CheckBox Grid.Row="0"
+                              Width="35"
+                              Height="35"
+                              IsThreeState="True"
+                              Style="{DynamicResource ConnectButton}"/>
+                        <TextBlock Grid.Row="1"
+                                   FontSize="4"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Top"
+                                   TextAlignment="Center"
+                                   Text="00:09:20"/>
+                    </Grid>
+                </Viewbox>
+                <Viewbox Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                          Margin="0 20 0 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0"
+                                    HorizontalAlignment="Right"
+                                    Width="40"
+                                    Margin="0 0 2 0">
+                            <Border Height="12"
+                                    BorderBrush="{StaticResource PurplePinkBrush}"
+                                    BorderThickness=".5"
+                                    CornerRadius="3">
+                                <TextBlock FontSize="6"
+                                           Foreground="{StaticResource PurplePinkBrush}"
+                                           VerticalAlignment="Center"
+                                           FontWeight="SemiBold"
+                                           TextAlignment="Center"
+                                           Text="Upload"/>
+                            </Border>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <TextBlock FontSize="8"
+                                           FontWeight="Bold"
+                                           Text="67.2"/>
+                                <TextBlock FontSize="4"
+                                           Margin="1"
+                                           VerticalAlignment="Bottom"
+                                           Text="mg"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1"
+                                    HorizontalAlignment="Left"
+                                    Width="40"
+                                    Margin="2 0 0 0">
+                            <Border Height="12"
+                                    BorderBrush="{StaticResource PurpleBrush}"
+                                    BorderThickness=".5"
+                                    CornerRadius="3">
+                                <TextBlock FontSize="6"
+                                           Foreground="{StaticResource PurpleBrush}"
+                                           VerticalAlignment="Center"
+                                           FontWeight="SemiBold"
+                                           TextAlignment="Center"
+                                           Text="Download"/>
+                            </Border>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <TextBlock FontSize="8"
+                                           FontWeight="Bold"
+                                           Text="284.1"/>
+                                <TextBlock FontSize="4"
+                                           Margin="1"
+                                           VerticalAlignment="Bottom"
+                                           Text="mg"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Viewbox>
+            </Grid>
+        </Border>
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                HorizontalAlignment="Right">
+            <Viewbox Height="40">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="ButtonMinimize"
+                            Click="ButtonMinimize_Click"
+                            Margin="20 0"
+                            Tag="{StaticResource Minimize}"
+                            Style="{DynamicResource WindowStateButton}"/>
+                    <Button x:Name="ButtonMaximize"
+                            Click="ButtonMaximize_Click"
+                            Margin="20 0"
+                            Tag="{StaticResource Maximize}"
+                            Style="{DynamicResource WindowStateButton}"/>
+                    <Button x:Name="ButtonClose"
+                            Click="ButtonClose_Click"
+                            Margin="20 0 30 0"
+                            Tag="{StaticResource Close}"
+                            Style="{DynamicResource WindowStateButton}"/>
+                </StackPanel>
+            </Viewbox>
+        </Border>
+        <Border Grid.Column="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Margin="20 60 0 0"
+                CornerRadius="100 0 0 0"
+                Background="{StaticResource WhitishBrush}">
+        </Border>
+    </Grid>
+</Page>
