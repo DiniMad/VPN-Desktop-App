@@ -1,0 +1,74 @@
+﻿<Page x:Class="GlobVpn.Views.SubscribePlans"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GlobVpn.Views"
+      xmlns:uc="clr-namespace:GlobVpn.Views.Resources.User_Controls"
+      mc:Ignorable="d" 
+      Title="SubscribePlans"
+      d:DesignHeight="600"
+      d:DesignWidth="1050"
+      MinHeight="450"
+      MinWidth="800">
+    <Page.Resources>
+        <ResourceDictionary Source="Resources/SubscribePlansResources.xaml" />
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill"
+                            ImageSource="{StaticResource MainWindowBackground}"/>
+        </Grid.Background>
+        <Viewbox Grid.Row="0">
+            <Image Source="{StaticResource HeadImage}"/>
+        </Viewbox>
+        <Viewbox Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <uc:SubscribePlanItem
+                    x:Name="YearPlane"
+                    Margin="5"
+                    Height="90"
+                    Width="50"
+                    Icon="{StaticResource Egg}"
+                    PlanDurationInMonth="1"
+                    GiftDurationInMonth="1"
+                    DollarPrice="25"
+                    RialPrice="60"/>
+                <uc:SubscribePlanItem
+                    x:Name="YearPlane2"
+                Margin="5"
+                Height="90"
+                Width="50"
+                Icon="{StaticResource Chick}"
+                    PlanDurationInMonth="3"
+                    GiftDurationInMonth="2"
+                DollarPrice="5"
+                RialPrice="6"/>
+                <uc:SubscribePlanItem
+                    x:Name="YearPlane3"
+                Margin="5"
+                Height="90"
+                Width="50"
+                Icon="{StaticResource Turkey}"
+                    PlanDurationInMonth="6"
+                    GiftDurationInMonth="3"
+                DollarPrice="25"
+                RialPrice="60"/>
+                <uc:SubscribePlanItem
+                    x:Name="YearPlane4"
+                Margin="5"
+                Height="90"
+                Width="50"
+                Icon="{StaticResource Peacock}"
+                    PlanDurationInMonth="12"
+                    GiftDurationInMonth="4"
+                DollarPrice="25"
+                RialPrice="60"/>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Page>
