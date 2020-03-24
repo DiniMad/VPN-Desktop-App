@@ -9,8 +9,9 @@
       MinHeight="450"
       MinWidth="800">
     <Page.Resources>
-        <ResourceDictionary Source="Resources/PrimaryPanel.xaml" />
+        <ResourceDictionary Source="Resources/PrimaryPanelResources.xaml" />
     </Page.Resources>
+    
     <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -32,17 +33,17 @@
         <Border Grid.Column="0"
                 Grid.Row="0"
                 Grid.RowSpan="3"
-                Margin="0 2 0 0"
+                Margin="0 5 0 0"
                 CornerRadius="0 80 0 0">
             <Border.Background>
                 <LinearGradientBrush
                     EndPoint="0,0"
                     StartPoint=".8,0">
                     <GradientStop
-                        Color="{StaticResource PurpleDark}"
+                        Color="{DynamicResource PrimaryMenuLeft}"
                         Offset="1"/>
                     <GradientStop
-                        Color="{StaticResource PurpleSlightLigh}"/>
+                        Color="{DynamicResource PrimaryMenuRight}"/>
                 </LinearGradientBrush>
             </Border.Background>
             <Grid>
@@ -108,8 +109,11 @@
                                 Tag="{StaticResource Setting}"
                             Style="{DynamicResource MainManuButton}"
                             />
-                        <Button Content="FeedBack"
-                                Tag="{StaticResource FeedBack}"
+                        <Button 
+                            x:Name="ButtonFeedBack"
+                            Content="FeedBack"
+                            Click="ButtonFeedBack_Click"
+                            Tag="{StaticResource FeedBack}"
                             Style="{DynamicResource MainManuButton}"
                             />
                         <Button Content="Info"
@@ -122,13 +126,23 @@
                             />
                     </StackPanel>
                 </Viewbox>
+                <Viewbox Grid.Row="3"
+                         Grid.Column="1">
+                    <Grid Height="100"
+                          Width="100">
+                        <Button Margin="35" 
+                                Tag="{DynamicResource Lamp}"
+                                Click="Button_Click" 
+                                Style="{DynamicResource IconButton}"/>
+                    </Grid>
+                </Viewbox>
             </Grid>
         </Border>
         <Border Grid.Column="1"
                     Grid.Row="2">
             <Border.Background>
                 <ImageBrush Stretch="Fill"
-                            ImageSource="{StaticResource MidleBoxBackground}"/>
+                            ImageSource="{DynamicResource MidleBoxBackground}"/>
             </Border.Background>
             <Grid>
                 <Grid.RowDefinitions>
@@ -148,11 +162,14 @@
                             <RowDefinition Height="2*"/>
                         </Grid.RowDefinitions>
                         <CheckBox Grid.Row="0"
+                                  Background="{DynamicResource DarkWhiteBlackBrush}"
+                                  Foreground="{DynamicResource BlackWhiteBrush}"
                               Width="35"
                               Height="35"
                               IsThreeState="True"
                               Style="{DynamicResource ConnectButton}"/>
                         <TextBlock Grid.Row="1"
+                                   Foreground="{DynamicResource BlackWhiteBrush}"
                                    FontSize="4"
                                    FontWeight="Bold"
                                    VerticalAlignment="Top"
@@ -186,10 +203,14 @@
                             </Border>
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                <TextBlock FontSize="8"
+                                <TextBlock
+                                    Foreground="{DynamicResource BlackWhiteBrush}"
+                                    FontSize="8"
                                            FontWeight="Bold"
                                            Text="67.2"/>
-                                <TextBlock FontSize="4"
+                                <TextBlock
+                                    Foreground="{DynamicResource BlackWhiteBrush}"
+                                    FontSize="4"
                                            Margin="1"
                                            VerticalAlignment="Bottom"
                                            Text="mg"/>
@@ -212,10 +233,14 @@
                             </Border>
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                <TextBlock FontSize="8"
+                                <TextBlock 
+                                    Foreground="{DynamicResource BlackWhiteBrush}"
+                                    FontSize="8"
                                            FontWeight="Bold"
                                            Text="284.1"/>
-                                <TextBlock FontSize="4"
+                                <TextBlock
+                                    Foreground="{DynamicResource BlackWhiteBrush}"
+                                    FontSize="4"
                                            Margin="1"
                                            VerticalAlignment="Bottom"
                                            Text="mg"/>
@@ -253,8 +278,10 @@
                 Grid.Row="1"
                 Grid.RowSpan="2"
                 Margin="20 60 0 0"
-                CornerRadius="100 0 0 0"
-                Background="{StaticResource WhitishBrush}">
+                CornerRadius="100 0 0 0">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource DarkWhiteBlack}"/>
+            </Border.Background>
         </Border>
     </Grid>
 </Page>
