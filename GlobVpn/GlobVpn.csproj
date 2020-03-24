@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -50,12 +51,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Views\Value Converters\ConnectButtonIsCheckedToTextConverter.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckOut.xaml.cs">
+      <DependentUpon>CheckOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Resources\Attached Properties\TexBoxPlaceHolder.cs" />
+    <Compile Include="Views\Resources\User Controls\SubscribePlanItem.xaml.cs">
+      <DependentUpon>SubscribePlanItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Resources\Value Converter\TagToCornerRadiusConverter.cs" />
+    <Compile Include="Views\Resources\Value Converter\ConnectButtonIsCheckedToTextConverter.cs" />
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PrimaryPanel.xaml.cs">
       <DependentUpon>PrimaryPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubscribePlans.xaml.cs">
+      <DependentUpon>SubscribePlans.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -69,7 +89,29 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Resources\MainPage.xaml">
+    <Page Include="Views\CheckOut.xaml" />
+    <Page Include="Views\Register.xaml" />
+    <Page Include="Views\Resources\BasicResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\CheckOutResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\DarkThemeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\DefaultThemeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\LoginAndRegisterResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\PrimaryPanelResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,6 +120,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PrimaryPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\SubscribePlansResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\User Controls\SubscribePlanItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubscribePlans.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,6 +152,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Resources\Images\Close.png" />
@@ -120,6 +178,44 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Resources\Images\MainWindowBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Lock.png" />
+    <Resource Include="Views\Resources\Images\UserInputIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\FaceBook.png" />
+    <Resource Include="Views\Resources\Images\Google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Lamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\MidleBoxBackGroundDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\LampDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\SubscribePlansHeadImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\CheckOutHeadImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Paypal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Bitcoin.png" />
+    <Resource Include="Views\Resources\Images\Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\Chick.png" />
+    <Resource Include="Views\Resources\Images\Peacock.png" />
+    <Resource Include="Views\Resources\Images\Turkey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
