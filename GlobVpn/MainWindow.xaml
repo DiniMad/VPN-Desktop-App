@@ -1,9 +1,10 @@
 ﻿<Window
-    x:Class="GlobVpn.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+    x:Class="GlobVpn.MainWindow"
     mc:Ignorable="d"
     Title="MainWindow"
     Height="600"
@@ -12,10 +13,20 @@
     MinWidth="800"
     WindowStyle="None"
     WindowStartupLocation="CenterScreen"
+    AllowsTransparency="True"
     SourceInitialized="Window_SourceInitialized">
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="6"/>
+    </WindowChrome.WindowChrome>
     <Window.Resources>
     </Window.Resources>
-    <Border>
-        <Frame Source="Views/PrimaryPanel.xaml" NavigationUIVisibility="Hidden"/>
-    </Border>
+    <Grid Background="{DynamicResource WhiteDarkGrayBrush}">
+        <Frame x:Name="FrameContent"
+               x:FieldModifier="private"
+               NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="FrameModal"
+               x:FieldModifier="private"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+      
 </Window>
