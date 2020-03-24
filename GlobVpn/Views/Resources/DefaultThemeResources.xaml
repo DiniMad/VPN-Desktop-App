@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:GlobVpn.Views.Resources">
+
+    <Color x:Key="WhiteBlack">#fff</Color>
+    <Color x:Key="DarkWhiteBlack">#eae7e7</Color>
+    <Color x:Key="DarkWhiteGray">#eae7e7</Color>
+    <Color x:Key="BlackWhite">#000</Color>
+    <Color x:Key="Purple">#392552</Color>
+    <Color x:Key="PrimaryMenuLeft">#42036e</Color>
+    <Color x:Key="PrimaryMenuRight">#6200a0</Color>
+
+
+    <SolidColorBrush x:Key="WhiteBlackBrush" Color="{DynamicResource WhiteBlack}"/>
+    <SolidColorBrush x:Key="WhiteDarkGrayBrush" Color="{DynamicResource WhiteBlack}"/>
+    <SolidColorBrush x:Key="DarkWhiteBlackBrush" Color="{DynamicResource DarkWhiteBlack}"/>
+    <SolidColorBrush x:Key="DarkWhiteGrayBrush" Color="{DynamicResource DarkWhiteGray}"/>
+    <SolidColorBrush x:Key="WhiteGrayBrush" Color="{DynamicResource WhiteBlack}"/>
+    <SolidColorBrush x:Key="BlackWhiteBrush" Color="{DynamicResource BlackWhite}"/>
+
+
+    <BitmapImage x:Key="MidleBoxBackground" UriSource="Images/MidleBoxBackGround.png" />
+    <BitmapImage x:Key="Lamp" UriSource="Images/Lamp.png" />
+
+</ResourceDictionary>
