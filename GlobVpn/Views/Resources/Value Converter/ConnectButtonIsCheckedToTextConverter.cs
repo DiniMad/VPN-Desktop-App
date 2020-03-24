@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace GlobVpn.ValueConverters
+namespace GlobVpn.Views.Resources.Value_Converter
 {
     class ConnectButtonIsCheckedToTextConverter : IValueConverter
     {
