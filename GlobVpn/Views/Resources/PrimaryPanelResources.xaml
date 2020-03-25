@@ -6,73 +6,15 @@
 
     <Color x:Key="Purple">#a609f9</Color>
     <Color x:Key="Pink">#d061b9</Color>
-    <Color x:Key="PinkDark">#8347a9</Color>
     <Color x:Key="WhiteDark">#dddddd</Color>
     <Color x:Key="PurplePink">#c445cd</Color>
 
-    <SolidColorBrush x:Key="Text" Color="White"/>
     <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource Purple}"/>
-    <SolidColorBrush x:Key="PinkDarkBrush" Color="{StaticResource PinkDark}"/>
     <SolidColorBrush x:Key="WhiteDarkBrush" Color="{StaticResource WhiteDark}"/>
     <SolidColorBrush x:Key="PurplePinkBrush" Color="{StaticResource PurplePink}"/>
 
-    <BitmapImage x:Key="UserAvatar" UriSource="Images/UserAvatar.png" />
-    <BitmapImage x:Key="Home" UriSource="Images/Home.png" />
-    <BitmapImage x:Key="EditProfile" UriSource="Images/EditProfile.png" />
-    <BitmapImage x:Key="Setting" UriSource="Images/Setting.png" />
-    <BitmapImage x:Key="FeedBack" UriSource="Images/FeedBack.png" />
-    <BitmapImage x:Key="Info" UriSource="Images/Info.png" />
-    <BitmapImage x:Key="Logout" UriSource="Images/Logout.png" />
 
-    <Style x:Key="MainManuButton" TargetType="{x:Type Button}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <StackPanel Width="85"
-                                Height="15"
-                                Orientation="Horizontal"
-                                Margin="0 8 0 0">
-                        <Image Source="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                            AncestorType={x:Type Button}},Path=Tag}"
-                               Width="10"
-                               Height="10"
-                               HorizontalAlignment="Left"
-                               Stretch="UniformToFill"/>
-                        <TextBlock Margin="5 0 0 0"
-                                   VerticalAlignment="Center"
-                                   Foreground="{StaticResource Text}"
-                                   FontSize="8"
-                                   Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                            AncestorType={x:Type Button}},Path=Content}">
-                        </TextBlock>
-                    </StackPanel>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsDefaulted" Value="true">
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Cursor" Value="Hand"/>
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To=".8" Duration="0:0:.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
-            </Trigger>
-        </Style.Triggers>
-    </Style>
+
     <Style x:Key="ConnectButton"
            TargetType="{x:Type CheckBox}">
         <Setter Property="Template">

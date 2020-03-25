@@ -45,14 +45,5 @@ namespace GlobVpn.Views
             Application.Current.Shutdown(0);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ((App)Application.Current).ChangeTheme();
-        }
-
-        private void ButtonFeedBack_Click(object sender, RoutedEventArgs e)
-        {
-            ((MainWindow)Window).WindowContent = MainWindow.Windows.SubscribePlans;
-        }
     }
 }
