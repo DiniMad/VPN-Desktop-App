@@ -76,26 +76,25 @@
                         </Border>
                         <StackPanel Grid.Row="1">
                             <TextBox
-                                ap:TexBoxPlaceHolder.PlaceHolder="Email Or Phone Number"
                                 Margin="-15 0 10 0"
                                 Height="14"
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                Tag="{StaticResource UserInput}"
+                                ap:InputIcon.Icon="{StaticResource UserInput}"
+                                ap:TexBoxPlaceHolder.PlaceHolder="Email Or Phone Number"
                                 Style="{StaticResource FormInput}"/>
                             <PasswordBox
-ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                 Margin="-15 5 10 0"
                                 Height="14"
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                Tag="{StaticResource Lock}"
-                                Style="{DynamicResource FormInputPassword}"
-                                />
+                                ap:InputIcon.Icon="{StaticResource Lock}"
+                                ap:TexBoxPlaceHolder.PlaceHolder="Password"  
+                                Style="{DynamicResource FormInputPassword}"/>
                             <CheckBox
-                                  Foreground="{DynamicResource BlackWhiteBrush}"
+                                Foreground="{DynamicResource BlackWhiteBrush}"
                                 Margin="10 5 0 0"
                                 Cursor="Hand"
                                 FontSize="10"
