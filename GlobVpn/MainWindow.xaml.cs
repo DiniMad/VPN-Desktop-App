@@ -65,5 +65,10 @@ namespace GlobVpn
         }
 
         public void SetModalContent(Page content) => FrameModal.Content = content;
+
+        private void Grid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

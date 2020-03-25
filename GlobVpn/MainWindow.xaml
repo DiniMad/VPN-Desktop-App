@@ -19,7 +19,9 @@
     </WindowChrome.WindowChrome>
     <Window.Resources>
     </Window.Resources>
-    <Grid Background="{DynamicResource WhiteDarkGrayBrush}">
+    <Grid
+        MouseLeftButtonDown="Grid_MouseLeftButtonDown"
+        Background="{DynamicResource WhiteDarkGrayBrush}">
         <Frame x:Name="FrameContent"
                x:FieldModifier="private"
                NavigationUIVisibility="Hidden"/>
