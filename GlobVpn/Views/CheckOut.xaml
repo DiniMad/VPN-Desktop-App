@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:GlobVpn.Views"
+    xmlns:ap="clr-namespace:GlobVpn.Views.Resources.Attached_Properties"
     mc:Ignorable="d"
     Title="CheckOut"
     d:DesignHeight="600"
@@ -179,7 +180,7 @@ MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                     FontSize="7"
                     Content="Confirim"
                     Foreground="White"
-                    Tag="4"
+                    ap:ButtonRadius.Radius="4"
                     Background="{StaticResource GreenBrushe}"
                     Style="{StaticResource RoundedButton}"/>
             </Grid>
