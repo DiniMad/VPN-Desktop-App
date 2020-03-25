@@ -21,8 +21,6 @@ namespace GlobVpn.Views
     /// </summary>
     public partial class SubscribePlans : Page
     {
-        public Window Window => Window.GetWindow(this);
-
         public SubscribePlans()
         {
             InitializeComponent();

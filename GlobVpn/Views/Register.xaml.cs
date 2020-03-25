@@ -7,7 +7,6 @@ namespace GlobVpn.Views
 {
     public partial class Register : Page
     {
-
         public Register()
         {
             InitializeComponent();

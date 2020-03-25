@@ -20,7 +20,6 @@ namespace GlobVpn.Views
     /// </summary>
     public partial class PrimaryPanel : Page
     {
-        public Window Window => Window.GetWindow(this);
         public PrimaryPanel()
         {
             InitializeComponent();

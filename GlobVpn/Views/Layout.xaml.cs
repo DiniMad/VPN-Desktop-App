@@ -23,8 +23,6 @@ namespace GlobVpn.Views
     /// </summary>
     public partial class Layout : Page
     {
-
-        public Window Window => Window.GetWindow(this);
         public WindowContent SetContent
         {
             set
