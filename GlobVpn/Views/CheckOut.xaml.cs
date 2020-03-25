@@ -1,3 +1,4 @@
+using GlobVpn.Views.Utilities;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,7 +14,6 @@ namespace GlobVpn.Views
         private readonly SolidColorBrush selectedItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(83, 77, 151));
         private readonly SolidColorBrush DefaultItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(70, 70, 70));
 
-        public Window Window => Window.GetWindow(this);
 
 
 
@@ -52,6 +52,6 @@ namespace GlobVpn.Views
         }
 
         private void GridEmptySpaceMouseLeftButtonUp(object sender, MouseButtonEventArgs e) =>
-            (Window as MainWindow).SetModalContent(null);
+            ApplicationActions.SetModalContent(null);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GlobVpn.Views.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace GlobVpn.Views
         {
             InitializeComponent();
 
-            // Different plans should bind to different methods
+            // TODO: Different plans should bind to different methods
             YearPlane.ButtonBuyClick = Button_Click;
             YearPlane2.ButtonBuyClick = Button_Click;
             YearPlane3.ButtonBuyClick = Button_Click;
@@ -36,7 +37,7 @@ namespace GlobVpn.Views
 
         private void Button_Click(object sender, RoutedEventArgs e, int planTitle, int dolarPrice, int rialPrice)
         {
-            (Window as MainWindow).SetModalContent(new CheckOut(planTitle,dolarPrice,rialPrice));
+            ApplicationActions.SetModalContent(new CheckOut(planTitle, dolarPrice, rialPrice));
         }
     }
 }
