@@ -65,6 +65,7 @@
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Resources\Attached Properties\ButtonRadius.cs" />
     <Compile Include="Views\Resources\Attached Properties\PasswordBoxMonitor.cs" />
     <Compile Include="Views\Resources\Attached Properties\InputIcon.cs" />
     <Compile Include="Views\Resources\Attached Properties\TexBoxPlaceHolder.cs" />
