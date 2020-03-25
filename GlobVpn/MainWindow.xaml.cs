@@ -20,7 +20,6 @@ namespace GlobVpn
     /// </summary>
     public partial class MainWindow
     {
-
         public WindowContent SetContent
         {
             set
@@ -35,10 +34,10 @@ namespace GlobVpn
                         newPage = new Register();
                         break;
                     case WindowContent.PrimaryPanel:
-                        // If its already a layout means that we should just change the contetn of the layout
-                        if (FrameContent.Content is Layout)
+                        // If its already a layout means that we should just change the content of the layout
+                        if (FrameContent.Content is Layout layoutPage)
                         {
-                            (FrameContent.Content as Layout).SetContent = value;
+                            layoutPage.SetContent = value;
                             return;
                         }
                         // Otherwise we should change the content of the window
@@ -48,7 +47,7 @@ namespace GlobVpn
                             break;
                         }
                     case WindowContent.SubscribePlans:
-                        (FrameContent.Content as Layout).SetContent = value;
+                        ((Layout) FrameContent.Content).SetContent = value;
                         return;
                     default:
                         throw new AggregateException();
@@ -57,7 +56,7 @@ namespace GlobVpn
                 frameActions.ChangeFrameContentWithAnimation(newPage);
             }
         }
-        public Page SetModalContent { set { FrameModal.Content = value; } }
+        public Page SetModalContent { set => FrameModal.Content = value; }
 
         public MainWindow()
         {

@@ -1,7 +1,6 @@
 using GlobVpn.Views.Utilities;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace GlobVpn.Views
 {

@@ -118,7 +118,7 @@ MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                                     FontSize="7"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
-                                    Text="{Binding DolarPrice}"/>
+                                    Text="{Binding DollarPrice}"/>
                             </Grid>
                         </ItemsControl>
                         <ItemsControl 

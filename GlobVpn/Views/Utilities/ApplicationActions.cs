@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace GlobVpn.Views.Utilities
@@ -15,9 +10,10 @@ namespace GlobVpn.Views.Utilities
         PrimaryPanel,
         SubscribePlans,
     }
-    static class ApplicationActions
+
+    internal static class ApplicationActions
     {
-        public static MainWindow MainWindow => (Application.Current.MainWindow as MainWindow);
+        private static MainWindow MainWindow => Application.Current.MainWindow as MainWindow;
 
         public static void SetContent(WindowContent content)
         {
@@ -25,7 +21,7 @@ namespace GlobVpn.Views.Utilities
         }
         public static void ChangeTheme()
         {
-            ((App)Application.Current).ChangeTheme();
+            App.ChangeTheme();
         }
         public static void SetModalContent(Page content)
         {

@@ -14,22 +14,22 @@ namespace GlobVpn
             new MainWindow().ShowDialog();
         }
 
-        private void SetUpTheme()
+        private static void SetUpTheme()
         {
             var isDarkTheme=GlobVpn.Properties.Settings.Default.DarkTheme;
 
-            var themeName=(!isDarkTheme)?"DefaultThemeResources.xaml":"DarkThemeResources.xaml";
+            var themeName=!isDarkTheme?"DefaultThemeResources.xaml":"DarkThemeResources.xaml";
             var uri = new Uri($"Views/Resources/{themeName}", UriKind.Relative);
 
             Current.Resources.MergedDictionaries[0].MergedDictionaries.Clear();
             Current.Resources.MergedDictionaries[0].MergedDictionaries.Add(new ResourceDictionary{Source = uri});
         }
 
-        public void ChangeTheme()
+        public static void ChangeTheme()
         {
             var isDarkTheme=GlobVpn.Properties.Settings.Default.DarkTheme;
 
-            var themeName=(isDarkTheme)?"DefaultThemeResources.xaml":"DarkThemeResources.xaml";
+            var themeName=isDarkTheme?"DefaultThemeResources.xaml":"DarkThemeResources.xaml";
             var uri = new Uri($"Views/Resources/{themeName}", UriKind.Relative);
 
             Current.Resources.MergedDictionaries[0].MergedDictionaries.Clear();

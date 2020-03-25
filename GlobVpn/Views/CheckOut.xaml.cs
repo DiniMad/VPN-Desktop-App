@@ -18,21 +18,21 @@ namespace GlobVpn.Views
         public string PlanDurationDisplay =>
             PlanDuration == 1 ? $"{PlanDuration} month" : $"{PlanDuration} months";
 
-        public int DolarPrice { get; }
+        public int DollarPrice { get; }
         public int RialPrice { get; }
 
-        public CheckOut(int planDuration, int dolarPrice, int rialPrice)
+        public CheckOut(int planDuration, int dollarPrice, int rialPrice)
         {
             InitializeComponent();
             DataContext = this;
             PlanDuration = planDuration;
-            DolarPrice = dolarPrice;
+            DollarPrice = dollarPrice;
             RialPrice = rialPrice;
         }
 
         private void ItemsControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var item =sender as ItemsControl;
+            var item =(ItemsControl)sender;
 
             if (item.Background == _selectedItemBackgroundBrush)
                 return;

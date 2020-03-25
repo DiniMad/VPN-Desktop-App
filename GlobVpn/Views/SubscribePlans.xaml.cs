@@ -1,4 +1,4 @@
-﻿using GlobVpn.Views.Utilities;
+using GlobVpn.Views.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,8 +30,6 @@ namespace GlobVpn.Views
             SixMonthsPlan.ButtonBuyClick = ButtonBuy_Click;
             TwelveMonthsPlan.ButtonBuyClick = ButtonBuy_Click;
         }
-        public Action<object, RoutedEventArgs> ButtonBuyClick { get; set; }
-
         private void ButtonBuy_Click(object sender, RoutedEventArgs e, int planTitle, int dolarPrice, int rialPrice)
         {
             ApplicationActions.SetModalContent(new CheckOut(planTitle, dolarPrice, rialPrice));
