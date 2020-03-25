@@ -11,11 +11,8 @@ namespace GlobVpn.Views
     public partial class CheckOut : Page
     {
 
-        private readonly SolidColorBrush selectedItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(83, 77, 151));
-        private readonly SolidColorBrush DefaultItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(70, 70, 70));
-
-
-
+        private readonly SolidColorBrush _selectedItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(83, 77, 151));
+        private readonly SolidColorBrush _defaultItemBackgroundBrush=new SolidColorBrush(Color.FromRgb(70, 70, 70));
 
         public int PlanDuration { get; }
         public string PlanDurationDisplay =>
@@ -33,25 +30,27 @@ namespace GlobVpn.Views
             RialPrice = rialPrice;
         }
 
-        private void ItemsControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void ItemsControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var item =sender as ItemsControl;
 
-            if (item.Background == selectedItemBackgroundBrush)
+            if (item.Background == _selectedItemBackgroundBrush)
                 return;
-            if (ItemsControl1.Background == selectedItemBackgroundBrush)
-                ItemsControl1.Background = DefaultItemBackgroundBrush;
+            if (ItemsControl1.Background == _selectedItemBackgroundBrush)
+                ItemsControl1.Background = _defaultItemBackgroundBrush;
 
-            if (ItemsControl2.Background == selectedItemBackgroundBrush)
-                ItemsControl2.Background = DefaultItemBackgroundBrush;
+            if (ItemsControl2.Background == _selectedItemBackgroundBrush)
+                ItemsControl2.Background = _defaultItemBackgroundBrush;
 
-            if (ItemsControl3.Background == selectedItemBackgroundBrush)
-                ItemsControl3.Background = DefaultItemBackgroundBrush;
+            if (ItemsControl3.Background == _selectedItemBackgroundBrush)
+                ItemsControl3.Background = _defaultItemBackgroundBrush;
 
-            item.Background = selectedItemBackgroundBrush;
+            item.Background = _selectedItemBackgroundBrush;
         }
 
-        private void GridEmptySpaceMouseLeftButtonUp(object sender, MouseButtonEventArgs e) =>
+        private void GridEmptySpaceMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
             ApplicationActions.SetModalContent(null);
+        }
     }
 }

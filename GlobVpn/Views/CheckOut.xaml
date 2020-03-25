@@ -98,7 +98,7 @@
                             Grid.Row="2"
                             Margin="6"
                             Background="#464646"
-MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
+MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                             Tag="{StaticResource Paypal}"
                             Style="{DynamicResource CheckOutItem}">
                             <Grid>
@@ -128,7 +128,7 @@ MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
                             Grid.ColumnSpan="2"
                             Margin="6"
                             Background="#464646"
-MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
+MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                             Tag="{StaticResource Bitcoin}"
                             Style="{DynamicResource CheckOutItem}">
                             <TextBlock
@@ -145,7 +145,7 @@ MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
                             Grid.Column="3"
                             Margin="6"
                             Background="#464646"
-MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
+MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                             Tag="{StaticResource Card}"
                             Style="{DynamicResource CheckOutItem}">
                             <Grid>
@@ -186,11 +186,11 @@ MouseLeftButtonUp="ItemsControl_MouseLeftButtonUp"
         <Grid
             Grid.RowSpan="2"
             Background="Transparent"
-            MouseLeftButtonUp="GridEmptySpaceMouseLeftButtonUp"/>
+            MouseLeftButtonDown="GridEmptySpaceMouseLeftButtonUp"/>
         <Grid
             Grid.Column="2"
             Grid.RowSpan="2"
             Background="Transparent"
-            MouseLeftButtonUp="GridEmptySpaceMouseLeftButtonUp"/>
+            MouseLeftButtonDown="GridEmptySpaceMouseLeftButtonUp"/>
     </Grid>
 </Page>
