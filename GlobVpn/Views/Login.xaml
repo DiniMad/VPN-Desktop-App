@@ -113,7 +113,7 @@
                                 Width="40"
                                 Height="14"
                                 Content="Login Now"
-                                Tag="5"
+                                ap:ButtonRadius.Radius="5"
                                 FontSize="6"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
@@ -146,20 +146,19 @@
                         <Button
                             x:Name="ButtonGoToSignUp"
                             Background="{DynamicResource WhiteGrayBrush}"
-                        
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                Width="80"
-                                Height="20"
-                                Tag="10"
-                                FontWeight="SemiBold"
-                                FontSize="14"
-                                VerticalContentAlignment="top"
-                                Padding="0 -1 0 0"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Width="80"
+                            Height="20"
+                            ap:ButtonRadius.Radius="10"
+                            FontWeight="SemiBold"
+                            FontSize="14"
+                            VerticalContentAlignment="top"
+                            Padding="0 -1 0 0"
                             Click="ButtonGoToSignUp_Click"
-                                Foreground="{StaticResource PurpleBrush}"
-                                Content="SignUp"
-                                Style="{DynamicResource RoundedButton}"/>
+                            Foreground="{StaticResource PurpleBrush}"
+                            Content="SignUp"
+                            Style="{DynamicResource RoundedButton}"/>
                     </Grid>
                 </Viewbox>
                 <Viewbox Grid.Row="3">

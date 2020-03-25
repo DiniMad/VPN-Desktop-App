@@ -106,7 +106,7 @@
                                 Width="40"
                                 Height="14"
                                 Content="SignUp Now"
-                                Tag="5"
+                                ap:ButtonRadius.Radius="5"
                                 FontSize="6"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
@@ -132,19 +132,19 @@
                         <Button
                             x:Name="ButtonGoToLogin"
                             Background="{DynamicResource WhiteGrayBrush}"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                Width="80"
-                                Height="20"
-                                Tag="10"
-                                FontWeight="SemiBold"
-                                FontSize="14"
-                                VerticalContentAlignment="top"
-                                Padding="0 -1 0 0"
-                                Foreground="{StaticResource PurpleBrush}"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Width="80"
+                            Height="20"
+                            ap:ButtonRadius.Radius="10"
+                            FontWeight="SemiBold"
+                            FontSize="14"
+                            VerticalContentAlignment="top"
+                            Padding="0 -1 0 0"
                             Click="ButtonGoToLogin_Click"
-                                Content="Login"
-                                Style="{DynamicResource RoundedButton}"/>
+                            Foreground="{StaticResource PurpleBrush}"
+                            Content="Login"
+                            Style="{DynamicResource RoundedButton}"/>
                     </Grid>
                 </Viewbox>
                 <Viewbox Grid.Row="3">
