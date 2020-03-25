@@ -126,6 +126,7 @@
                             Margin="35" 
                             Tag="{DynamicResource Lamp}"
                             Click="ButtonChangeTheme_Click"
+                            Background="Transparent"
                             Style="{DynamicResource IconButton}"/>
                     </Grid>
                 </Viewbox>
