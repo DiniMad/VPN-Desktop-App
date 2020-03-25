@@ -111,7 +111,9 @@
                             ap:ElementIcon.Icon="{StaticResource Info}"
                             Style="{DynamicResource MainManuButton}"/>
                         <Button 
+                            x:Name="ButtonInfo"
                             Content="Logout"
+                            Click="ButtonInfo_Click"
                             ap:ElementIcon.Icon="{StaticResource Logout}"
                             Style="{DynamicResource MainManuButton}"/>
                     </StackPanel>

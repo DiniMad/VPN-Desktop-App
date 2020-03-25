@@ -1,4 +1,4 @@
-using GlobVpn.Views.Utilities;
+﻿using GlobVpn.Views.Utilities;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,12 +51,16 @@ namespace GlobVpn.Views
         }
         private void ButtonFeedBack_Click(object sender, RoutedEventArgs e)
         {
+            ApplicationActions.SetContent(WindowContent.FeedBack);
+        }
+
+        private void ButtonInfo_Click(object sender, RoutedEventArgs e)
+        {
             ApplicationActions.SetContent(WindowContent.SubscribePlans);
         }
         private void ButtonChangeTheme_Click(object sender, RoutedEventArgs e)
         {
             ApplicationActions.ChangeTheme();
         }
-
     }
 }
