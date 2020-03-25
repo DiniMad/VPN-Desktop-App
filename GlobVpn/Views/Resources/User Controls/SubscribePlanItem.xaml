@@ -23,7 +23,7 @@
         <Border
             Grid.Row="1"
             CornerRadius="10"
-            Background="#FF4C4685"
+            Background="{Binding BoxBackground}"
             Style="{StaticResource BoxBorder}">
             <Viewbox>
                 <StackPanel 
