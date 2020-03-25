@@ -14,18 +14,18 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.3"
-                                            To="#3F3A68"
-                                            Storyboard.TargetProperty="Background.Color"/>
+                            <DoubleAnimation Duration="0:0:0.3"
+                                            To="0.9"
+                                            Storyboard.TargetProperty="Opacity"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.3"
-                                            To="#FF4C4685"
-                                            Storyboard.TargetProperty="Background.Color"/>
+                            <DoubleAnimation Duration="0:0:0.3"
+                                            To="1"
+                                            Storyboard.TargetProperty="Opacity"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
