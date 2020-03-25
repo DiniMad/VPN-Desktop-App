@@ -101,7 +101,7 @@
                             Margin="6"
                             Background="#464646"
 MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
-                            Tag="{StaticResource Paypal}"
+                            ap:ElementIcon.Icon="{StaticResource Paypal}"
                             Style="{DynamicResource CheckOutItem}">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -131,7 +131,7 @@ MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                             Margin="6"
                             Background="#464646"
 MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
-                            Tag="{StaticResource Bitcoin}"
+                            ap:ElementIcon.Icon="{StaticResource Bitcoin}"
                             Style="{DynamicResource CheckOutItem}">
                             <TextBlock
                                 Foreground="White"
@@ -148,7 +148,7 @@ MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
                             Margin="6"
                             Background="#464646"
 MouseLeftButtonDown="ItemsControl_MouseLeftButtonDown"
-                            Tag="{StaticResource Card}"
+                            ap:ElementIcon.Icon="{StaticResource Card}"
                             Style="{DynamicResource CheckOutItem}">
                             <Grid>
                                 <Grid.ColumnDefinitions>

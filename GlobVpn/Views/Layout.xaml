@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlobVpn.Views"
+      xmlns:ap="clr-namespace:GlobVpn.Views.Resources.Attached_Properties"
       mc:Ignorable="d" 
       Title="Layout"
       d:DesignHeight="600"
@@ -89,32 +90,30 @@
                             x:Name="ButtonHome"
                             Content="Home"
                             Click="ButtonHome_Click"
-                            Tag="{StaticResource Home}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
-                        <Button Content="Edit Profile"
-                                Tag="{StaticResource EditProfile}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
-                        <Button Content="Setting"
-                                Tag="{StaticResource Setting}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
+                            ap:ElementIcon.Icon="{StaticResource Home}"
+                            Style="{DynamicResource MainManuButton}"/>
+                        <Button 
+                            Content="Edit Profile"
+                            ap:ElementIcon.Icon="{StaticResource EditProfile}"
+                            Style="{DynamicResource MainManuButton}"/>
+                        <Button
+                            Content="Setting"
+                            ap:ElementIcon.Icon="{StaticResource Setting}"
+                            Style="{DynamicResource MainManuButton}"/>
                         <Button 
                             x:Name="ButtonFeedBack"
                             Content="FeedBack"
                             Click="ButtonFeedBack_Click"
-                            Tag="{StaticResource FeedBack}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
-                        <Button Content="Info"
-                                Tag="{StaticResource Info}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
-                        <Button Content="Logout"
-                                Tag="{StaticResource Logout}"
-                            Style="{DynamicResource MainManuButton}"
-                            />
+                            ap:ElementIcon.Icon="{StaticResource FeedBack}"
+                            Style="{DynamicResource MainManuButton}"/>
+                        <Button 
+                            Content="Info"
+                            ap:ElementIcon.Icon="{StaticResource Info}"
+                            Style="{DynamicResource MainManuButton}"/>
+                        <Button 
+                            Content="Logout"
+                            ap:ElementIcon.Icon="{StaticResource Logout}"
+                            Style="{DynamicResource MainManuButton}"/>
                     </StackPanel>
                 </Viewbox>
                 <Viewbox Grid.Row="3"
@@ -124,7 +123,7 @@
                         <Button 
                             x:Name="ButtonChangeTheme"
                             Margin="35" 
-                            Tag="{DynamicResource Lamp}"
+                            ap:ElementIcon.Icon="{DynamicResource Lamp}"
                             Click="ButtonChangeTheme_Click"
                             Background="Transparent"
                             Style="{DynamicResource IconButton}"/>

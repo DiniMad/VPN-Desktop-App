@@ -103,7 +103,7 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         Background="{TemplateBinding Background}"
                         SnapsToDevicePixels="true">
-                        <Image Source="{TemplateBinding Tag}"/>
+                        <Image Source="{TemplateBinding ap:ElementIcon.Icon}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
