@@ -4,8 +4,6 @@
                     xmlns:ap="clr-namespace:GlobVpn.Views.Resources.Attached_Properties"
                     xmlns:vc="clr-namespace:GlobVpn.Views.Resources.Value_Converter">
 
-    <vc:TagToCornerRadiusConverter x:Key="TagToCornerRadius" />
-
     <Color x:Key="Green">#39B54A</Color>
 
     <SolidColorBrush x:Key="GreenBrushe" Color="{StaticResource Green}"/>
