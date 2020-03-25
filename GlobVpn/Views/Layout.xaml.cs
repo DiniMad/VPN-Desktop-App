@@ -1,4 +1,4 @@
-﻿using GlobVpn.Views.Utilities;
+using GlobVpn.Views.Utilities;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +24,9 @@ namespace GlobVpn.Views
                         break;
                     case WindowContent.SubscribePlans:
                         newPage = new SubscribePlans();
+                        break;
+                    case WindowContent.FeedBack:
+                        newPage = new FeedBack();
                         break;
                     default:
                         throw new AggregateException();
