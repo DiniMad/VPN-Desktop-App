@@ -59,6 +59,9 @@
     <Compile Include="Views\CheckOut.xaml.cs">
       <DependentUpon>CheckOut.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FeedBack.xaml.cs">
+      <DependentUpon>FeedBack.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Layout.xaml.cs">
       <DependentUpon>Layout.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CheckOut.xaml" />
+    <Page Include="Views\FeedBack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Layout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Resources\DefaultThemeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\FeedBackResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,6 +242,13 @@
     <Resource Include="Views\Resources\Images\Chick.png" />
     <Resource Include="Views\Resources\Images\Peacock.png" />
     <Resource Include="Views\Resources\Images\Turkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\FeedBackHeadImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\StarFill.png" />
+    <Resource Include="Views\Resources\Images\StarEmpty.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
