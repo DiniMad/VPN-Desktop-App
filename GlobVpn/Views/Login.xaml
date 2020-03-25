@@ -84,8 +84,7 @@
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
                                 Tag="{StaticResource UserInput}"
                                 Style="{StaticResource FormInput}"/>
-                            <TextBox
-                               
+                            <PasswordBox
 ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                 Margin="-15 5 10 0"
                                 Height="14"
@@ -93,7 +92,8 @@ ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
                                 Tag="{StaticResource Lock}"
-                                Style="{StaticResource FormInput}"/>
+                                Style="{DynamicResource FormInputPassword}"
+                                />
                             <CheckBox
                                   Foreground="{DynamicResource BlackWhiteBrush}"
                                 Margin="10 5 0 0"

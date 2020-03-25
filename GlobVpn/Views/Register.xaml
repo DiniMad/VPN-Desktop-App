@@ -82,7 +82,7 @@
                                  Background="{DynamicResource WhiteDarkGrayBrush}"
                                 Tag="{StaticResource UserInput}"
                                 Style="{StaticResource FormInput}"/>
-                            <TextBox
+                            <PasswordBox
 ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                 Margin="-15 5 10 0"
                                 Height="14"
@@ -90,8 +90,9 @@ ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                  Foreground="{DynamicResource BlackWhiteBrush}"
                                  Background="{DynamicResource WhiteDarkGrayBrush}"
                                 Tag="{StaticResource Lock}"
-                                Style="{StaticResource FormInput}"/>
-                            <TextBox
+                                Style="{StaticResource FormInputPassword}"
+                                />
+                            <PasswordBox
                                  Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
 ap:TexBoxPlaceHolder.PlaceHolder="Retry Password"
@@ -99,7 +100,8 @@ ap:TexBoxPlaceHolder.PlaceHolder="Retry Password"
                                 Height="14"
                                 FontSize="5"
                                 Tag="{StaticResource Lock}"
-                                Style="{StaticResource FormInput}"/>
+                                Style="{StaticResource FormInputPassword}"
+                                />
                             <Button
                                 x:Name="ButtonRegister"
                                 Margin="0 5 0 0"
@@ -156,7 +158,7 @@ ap:TexBoxPlaceHolder.PlaceHolder="Retry Password"
                                    FontWeight="SemiBold"
                                    Text="Contact For Support"/>
                     </Grid>
-                          
+
                 </Viewbox>
             </Grid>
         </Border>
