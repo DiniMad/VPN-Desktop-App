@@ -92,6 +92,7 @@
                             Background="Transparent"
                             BorderThickness="0"
                             Foreground="{DynamicResource BlackWhiteBrush}"
+                            Click="ButtonEditPlay_OnClick"
                             Content="wrong order? Edit" Style="{DynamicResource ButtonWithoutHovor}"/>
                         <ItemsControl 
                             x:Name="ItemsControl1"

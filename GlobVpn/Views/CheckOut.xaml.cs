@@ -52,5 +52,10 @@ namespace GlobVpn.Views
         {
             ApplicationActions.SetModalContent(null);
         }
+
+        private void ButtonEditPlay_OnClick(object sender, RoutedEventArgs e)
+        {
+            ApplicationActions.SetModalContent(null);
+        }
     }
 }
