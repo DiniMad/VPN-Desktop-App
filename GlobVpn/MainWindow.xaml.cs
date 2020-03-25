@@ -19,7 +19,7 @@ namespace GlobVpn
     /// </summary>
     public partial class MainWindow
     {
-        public enum Windows
+        public enum WindowContent
         {
             Login,
             Register,
@@ -27,38 +27,46 @@ namespace GlobVpn
             SubscribePlans,
         }
 
-        public Windows WindowContent
+        public WindowContent SetContent
         {
             set
             {
                 Page newPage;
                 switch (value)
                 {
-                    case Windows.Login:
+                    case WindowContent.Login:
                         newPage = new Login();
                         break;
-                    case Windows.Register:
+                    case WindowContent.Register:
                         newPage = new Register();
                         break;
-                    case Windows.PrimaryPanel:
-                        newPage = new Layout();
-                        break;
-                    case Windows.SubscribePlans:
-                        newPage = new SubscribePlans();
-                        break;
+                    case WindowContent.PrimaryPanel:
+                        // If its already a layout means that we should just change the contetn of the layout
+                        if (FrameContent.Content is Layout)
+                        {
+                            (FrameContent.Content as Layout).SetContent = value;
+                            return;
+                        }
+                        // Otherwise we should change the content of the window
+                        else
+                        {
+                            newPage = new Layout();
+                            break;
+                        }
+                    case WindowContent.SubscribePlans:
+                        (FrameContent.Content as Layout).SetContent = value;
+                        return;
                     default:
                         throw new AggregateException();
                 }
-                //FrameContent.Content = newPage;
                 NavigateToWindow(newPage);
             }
         }
 
         private bool IsWindowOpacityAnimationRunning;
-        private bool IsWindowMarginAnimationRunning;
         private TimeSpan AnimationsDuration=TimeSpan.FromSeconds(.8);
         private int MarginAnimationOffset=600;
-     
+
 
         public MainWindow()
         {
@@ -68,9 +76,8 @@ namespace GlobVpn
 
         private void NavigateToWindow(Page newPage)
         {
-            if (IsWindowOpacityAnimationRunning || IsWindowMarginAnimationRunning)
+            if (IsWindowOpacityAnimationRunning)
                 return;
-            //IsWindowMarginAnimationRunning = true;
             IsWindowOpacityAnimationRunning = true;
             var marginAnimation = new ThicknessAnimation
             {
@@ -82,17 +89,8 @@ namespace GlobVpn
                 To = 0,
                 Duration = AnimationsDuration
             };
-            marginAnimation.Completed += (sender, e) => MarginAnimation_Completed(sender, e, newPage);
             opacityAnimation.Completed += (sender, e) => OpacityAnimation_Completed(sender, e, newPage);
-            //FrameContent.BeginAnimation(MarginProperty, marginAnimation);
             FrameContent.BeginAnimation(OpacityProperty, opacityAnimation);
-        }
-        private void MarginAnimation_Completed(object sender, EventArgs e, Page newPage)
-        {
-            IsWindowMarginAnimationRunning = false;
-            RunSecondPartOfAnimation(newPage);
-
-
         }
         private void OpacityAnimation_Completed(object sender, EventArgs e, Page newPage)
         {
@@ -101,7 +99,7 @@ namespace GlobVpn
         }
         private void RunSecondPartOfAnimation(Page newPage)
         {
-            if (IsWindowMarginAnimationRunning || IsWindowOpacityAnimationRunning)
+            if ( IsWindowOpacityAnimationRunning)
                 return;
 
             FrameContent.Content = newPage;
