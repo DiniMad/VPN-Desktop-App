@@ -72,7 +72,6 @@
     <Compile Include="Views\Resources\User Controls\SubscribePlanItem.xaml.cs">
       <DependentUpon>SubscribePlanItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Resources\Value Converter\TagToCornerRadiusConverter.cs" />
     <Compile Include="Views\Resources\Value Converter\ConnectButtonIsCheckedToTextConverter.cs" />
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
