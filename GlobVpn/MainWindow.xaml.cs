@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
@@ -53,14 +53,10 @@ namespace GlobVpn
                     default:
                         throw new AggregateException();
                 }
-                NavigateToWindow(newPage);
+                var frameActions=new FrameAnimation(FrameContent,.8);
+                frameActions.ChangeFrameContentWithAnimation(newPage);
             }
         }
-
-        private bool IsWindowOpacityAnimationRunning;
-        private TimeSpan AnimationsDuration=TimeSpan.FromSeconds(.8);
-        private int MarginAnimationOffset=600;
-
 
         public MainWindow()
         {
@@ -68,50 +64,6 @@ namespace GlobVpn
             FrameContent.Content = new Login();
         }
 
-        private void NavigateToWindow(Page newPage)
-        {
-            if (IsWindowOpacityAnimationRunning)
-                return;
-            IsWindowOpacityAnimationRunning = true;
-            var marginAnimation = new ThicknessAnimation
-            {
-                To = new Thickness(-MarginAnimationOffset, 0, MarginAnimationOffset, 0),
-                Duration = AnimationsDuration
-            };
-            var opacityAnimation = new DoubleAnimation
-            {
-                To = 0,
-                Duration = AnimationsDuration
-            };
-            opacityAnimation.Completed += (sender, e) => OpacityAnimation_Completed(sender, e, newPage);
-            FrameContent.BeginAnimation(OpacityProperty, opacityAnimation);
-        }
-        private void OpacityAnimation_Completed(object sender, EventArgs e, Page newPage)
-        {
-            IsWindowOpacityAnimationRunning = false;
-            RunSecondPartOfAnimation(newPage);
-        }
-        private void RunSecondPartOfAnimation(Page newPage)
-        {
-            if ( IsWindowOpacityAnimationRunning)
-                return;
-
-            FrameContent.Content = newPage;
-            //Task.Delay(300);
-            var marginAnimation = new ThicknessAnimation
-            {
-                From= new Thickness(MarginAnimationOffset, 0, -MarginAnimationOffset, 0),
-                To = new Thickness(0),
-                Duration = AnimationsDuration
-            };
-            var opacity = new DoubleAnimation
-            {
-                To = 1,
-                Duration = AnimationsDuration
-            };
-            //FrameContent.BeginAnimation(MarginProperty, marginAnimation);
-            FrameContent.BeginAnimation(OpacityProperty, opacity);
-        }
 
         private void Window_SourceInitialized(object sender, EventArgs e)
         {
