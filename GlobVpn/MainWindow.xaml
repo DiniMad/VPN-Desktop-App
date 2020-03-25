@@ -40,7 +40,7 @@
                             Background="{DynamicResource DarkWhiteGrayBrush}"
                             ap:ButtonRadius.Radius="10"
                             ap:ElementIcon.Icon="{StaticResource Minimize}"
-                            Style="{DynamicResource IconButton}"/>
+                            Style="{DynamicResource IconButtonRounded}"/>
                     <Button x:Name="ButtonMaximize"
                             Click="ButtonMaximize_Click"
                             Margin="20 0"
@@ -48,7 +48,7 @@
                             Background="{DynamicResource DarkWhiteGrayBrush}"
                             ap:ButtonRadius.Radius="10"
                             ap:ElementIcon.Icon="{StaticResource Maximize}"
-                            Style="{DynamicResource IconButton}"/>
+                            Style="{DynamicResource IconButtonRounded}"/>
                     <Button x:Name="ButtonClose"
                             Click="ButtonClose_Click"
                             Margin="20 0 30 0"
@@ -56,7 +56,7 @@
                             Background="{DynamicResource DarkWhiteGrayBrush}"
                             ap:ButtonRadius.Radius="10"
                             ap:ElementIcon.Icon="{StaticResource Close}"
-                            Style="{DynamicResource IconButton}"/>
+                            Style="{DynamicResource IconButtonRounded}"/>
                 </StackPanel>
             </Viewbox>
         </Border>

@@ -126,7 +126,7 @@
                             ap:ElementIcon.Icon="{DynamicResource Lamp}"
                             Click="ButtonChangeTheme_Click"
                             Background="Transparent"
-                            Style="{DynamicResource IconButton}"/>
+                            Style="{DynamicResource IconButtonRounded}"/>
                     </Grid>
                 </Viewbox>
             </Grid>
