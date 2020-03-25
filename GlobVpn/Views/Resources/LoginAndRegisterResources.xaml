@@ -57,8 +57,7 @@
                                         HorizontalAlignment="Right"
                                         Grid.Column="0"
                                         Margin="0 3"
-                                        Source="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                            AncestorType={x:Type TextBox}},Path=Tag}"/>
+                                        Source="{TemplateBinding ap:InputIcon.Icon}"/>
                             <Border
                                 Background="{TemplateBinding Background}"
                                 Grid.Column="1"
@@ -138,7 +137,7 @@
                                 HorizontalAlignment="Right"
                                 Grid.Column="0"
                                 Margin="0 3"
-                                Source="{TemplateBinding Tag}"/>
+                                Source="{TemplateBinding ap:InputIcon.Icon}"/>
                             <Border
                                 x:Name="Border"
                                 Background="{TemplateBinding Background}"
