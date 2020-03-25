@@ -67,7 +67,7 @@
     </Compile>
     <Compile Include="Views\Resources\Attached Properties\ButtonRadius.cs" />
     <Compile Include="Views\Resources\Attached Properties\PasswordBoxMonitor.cs" />
-    <Compile Include="Views\Resources\Attached Properties\InputIcon.cs" />
+    <Compile Include="Views\Resources\Attached Properties\ElementIcon.cs" />
     <Compile Include="Views\Resources\Attached Properties\TexBoxPlaceHolder.cs" />
     <Compile Include="Views\Resources\User Controls\SubscribePlanItem.xaml.cs">
       <DependentUpon>SubscribePlanItem.xaml</DependentUpon>
