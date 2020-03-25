@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+    xmlns:ap="clr-namespace:GlobVpn.Views.Resources.Attached_Properties"
     x:Class="GlobVpn.MainWindow"
     mc:Ignorable="d"
     Title="MainWindow"
@@ -36,17 +36,17 @@
                     <Button x:Name="ButtonMinimize"
                             Click="ButtonMinimize_Click"
                             Margin="20 0"
-                            Tag="{StaticResource Minimize}"
+                            ap:InputIcon.Icon="{StaticResource Minimize}"
                             Style="{DynamicResource WindowStateButton}"/>
                     <Button x:Name="ButtonMaximize"
                             Click="ButtonMaximize_Click"
                             Margin="20 0"
-                            Tag="{StaticResource Maximize}"
+                            ap:InputIcon.Icon="{StaticResource Maximize}"
                             Style="{DynamicResource WindowStateButton}"/>
                     <Button x:Name="ButtonClose"
                             Click="ButtonClose_Click"
                             Margin="20 0 30 0"
-                            Tag="{StaticResource Close}"
+                            ap:InputIcon.Icon="{StaticResource Close}"
                             Style="{DynamicResource WindowStateButton}"/>
                 </StackPanel>
             </Viewbox>
