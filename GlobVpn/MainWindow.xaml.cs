@@ -41,7 +41,7 @@ namespace GlobVpn
                         newPage = new Register();
                         break;
                     case Windows.PrimaryPanel:
-                        newPage = new PrimaryPanel();
+                        newPage = new Layout();
                         break;
                     case Windows.SubscribePlans:
                         newPage = new SubscribePlans();
