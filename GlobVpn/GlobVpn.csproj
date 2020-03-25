@@ -59,6 +59,9 @@
     <Compile Include="Views\CheckOut.xaml.cs">
       <DependentUpon>CheckOut.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Layout.xaml.cs">
+      <DependentUpon>Layout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CheckOut.xaml" />
+    <Page Include="Views\Layout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Register.xaml" />
     <Page Include="Views\Resources\BasicResources.xaml">
       <SubType>Designer</SubType>
@@ -104,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Resources\DefaultThemeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Resources\LayoutResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
