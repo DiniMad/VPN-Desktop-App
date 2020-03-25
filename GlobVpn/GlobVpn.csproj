@@ -65,6 +65,7 @@
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Resources\Attached Properties\PasswordBoxMonitor.cs" />
     <Compile Include="Views\Resources\Attached Properties\TexBoxPlaceHolder.cs" />
     <Compile Include="Views\Resources\User Controls\SubscribePlanItem.xaml.cs">
       <DependentUpon>SubscribePlanItem.xaml</DependentUpon>
