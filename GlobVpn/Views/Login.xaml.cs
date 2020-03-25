@@ -48,12 +48,12 @@ namespace GlobVpn.Views
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Window).WindowContent = MainWindow.Windows.PrimaryPanel;
+            ((MainWindow)Window).SetContent = MainWindow.WindowContent.PrimaryPanel;
         }
 
         private void ButtonGoToSignUp_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Window).WindowContent = MainWindow.Windows.Register;
+            ((MainWindow)Window).SetContent = MainWindow.WindowContent.Register;
         }
     }
 }
