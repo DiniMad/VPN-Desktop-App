@@ -11,34 +11,39 @@ namespace GlobVpn.Views.Utilities
 {
     class FrameAnimation
     {
-        private TimeSpan _animationsDuration { get; }
-        private Frame _frame { get; }
+        private TimeSpan AnimationsDuration { get; }
+        private Frame Frame { get; }
+        public event EventHandler AnimationCompleted;
 
         public FrameAnimation(Frame frame, double animationDuration)
         {
-            _frame = frame;
-            _animationsDuration = TimeSpan.FromSeconds(animationDuration);
+            Frame = frame;
+            AnimationsDuration = TimeSpan.FromSeconds(animationDuration);
         }
+
+
         public void ChangeFrameContentWithAnimation(Page newPage)
         {
             var opacityAnimation = new DoubleAnimation
             {
                 To = 0,
-                Duration = _animationsDuration
+                Duration = AnimationsDuration
             };
             opacityAnimation.Completed += (sender, e) => OpacityAnimation_Completed(newPage);
-            _frame.BeginAnimation(UIElement.OpacityProperty, opacityAnimation);
+            Frame.BeginAnimation(UIElement.OpacityProperty, opacityAnimation);
         }
 
         private void OpacityAnimation_Completed(Page newPage)
         {
-            _frame.Content = newPage;
+            Frame.Content = newPage;
             var opacity = new DoubleAnimation
             {
                 To = 1,
-                Duration = _animationsDuration
+                Duration = AnimationsDuration
             };
-            _frame.BeginAnimation(UIElement.OpacityProperty, opacity);
+            if (AnimationCompleted != null)
+                opacity.Completed += (sender, e) => AnimationCompleted(sender, e);
+            Frame.BeginAnimation(UIElement.OpacityProperty, opacity);
         }
     }
 }
