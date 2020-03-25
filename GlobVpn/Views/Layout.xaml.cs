@@ -45,21 +45,24 @@ namespace GlobVpn.Views
                 frameActions.ChangeFrameContentWithAnimation(newPage);
             }
         }
-     
+
 
         public Layout()
         {
             InitializeComponent();
             FrameContent.Content = new PrimaryPanel();
         }
-        private void ButtonChangeTheme_Click(object sender, RoutedEventArgs e)
-        {
-            ApplicationActions.ChangeTheme();
-        }
-
         private void ButtonFeedBack_Click(object sender, RoutedEventArgs e)
         {
             ApplicationActions.SetContent(WindowContent.SubscribePlans);
+        }
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationActions.SetContent(WindowContent.PrimaryPanel);
+        }
+        private void ButtonChangeTheme_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationActions.ChangeTheme();
         }
     }
 }

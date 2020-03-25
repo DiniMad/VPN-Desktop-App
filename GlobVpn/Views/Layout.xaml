@@ -88,8 +88,11 @@
                                    Foreground="{StaticResource Text}">
                             Welcome Samin
                         </TextBlock>
-                        <Button Content="Home"
-                                Tag="{StaticResource Home}"
+                        <Button
+                            x:Name="ButtonHome"
+                            Content="Home"
+                            Click="ButtonHome_Click"
+                            Tag="{StaticResource Home}"
                             Style="{DynamicResource MainManuButton}"
                             />
                         <Button Content="Edit Profile"
