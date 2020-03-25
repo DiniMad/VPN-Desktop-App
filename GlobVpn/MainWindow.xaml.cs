@@ -57,6 +57,7 @@ namespace GlobVpn
                 frameActions.ChangeFrameContentWithAnimation(newPage);
             }
         }
+        public Page SetModalContent { set { FrameModal.Content = value; } }
 
         public MainWindow()
         {
@@ -64,15 +65,13 @@ namespace GlobVpn
             FrameContent.Content = new Login();
         }
 
-        public void SetModalContent(Page content) => FrameModal.Content = content;
-
         private void Grid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             DragMove();
         }
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
-           WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
