@@ -11,6 +11,7 @@ using System.Threading;
 using System.Windows.Controls;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using GlobVpn.Views.Utilities;
 
 namespace GlobVpn
 {
@@ -19,13 +20,6 @@ namespace GlobVpn
     /// </summary>
     public partial class MainWindow
     {
-        public enum WindowContent
-        {
-            Login,
-            Register,
-            PrimaryPanel,
-            SubscribePlans,
-        }
 
         public WindowContent SetContent
         {
