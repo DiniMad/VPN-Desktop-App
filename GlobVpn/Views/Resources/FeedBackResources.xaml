@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:GlobVpn.Views.Resources"
+                    xmlns:ap="clr-namespace:GlobVpn.Views.Resources.Attached_Properties">
+
+    <Color x:Key="Purple">#534C97</Color>
+
+    <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource Purple}"/>
+
+    <BitmapImage x:Key="HeadImage" UriSource="Images/FeedBackHeadImage.png" />
+    <BitmapImage x:Key="StarEmpty" UriSource="Images/StarEmpty.png" />
+    <BitmapImage x:Key="StarFill" UriSource="Images/StarFill.png" />
+
+</ResourceDictionary>
