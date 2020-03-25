@@ -12,9 +12,8 @@
         <ResourceDictionary Source="Resources/PrimaryPanelResources.xaml" />
     </Page.Resources>
     
-    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+    <Grid>
         <Grid.ColumnDefinitions>
-    
             <ColumnDefinition
                 Width="40*"/>
             <ColumnDefinition
@@ -136,30 +135,6 @@
                     </Grid>
                 </Viewbox>
             </Grid>
-        </Border>
-        <Border Grid.Row="0"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                HorizontalAlignment="Right">
-            <Viewbox Height="40">
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="ButtonMinimize"
-                            Click="ButtonMinimize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Minimize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonMaximize"
-                            Click="ButtonMaximize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Maximize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonClose"
-                            Click="ButtonClose_Click"
-                            Margin="20 0 30 0"
-                            Tag="{StaticResource Close}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                </StackPanel>
-            </Viewbox>
         </Border>
         <Border Grid.Column="1"
                 Grid.Row="1"
