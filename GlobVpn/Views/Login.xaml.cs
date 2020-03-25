@@ -21,28 +21,10 @@ namespace GlobVpn.Views
     /// </summary>
     public partial class Login : Page
     {
-        public Window Window => Window.GetWindow(this);
-
         public Login()
         {
             InitializeComponent();
         }
-
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            Window.WindowState = WindowState.Minimized;
-        }
-
-        private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
-        {
-            Window.WindowState = Window.WindowState == WindowState.Normal ? WindowState.Maximized : WindowState.Normal;
-        }
-
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown(0);
-        }
-
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             ApplicationActions.SetContent(WindowContent.PrimaryPanel);

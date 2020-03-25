@@ -70,5 +70,19 @@ namespace GlobVpn
         {
             DragMove();
         }
+        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+           WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState == WindowState.Normal ? WindowState.Maximized : WindowState.Normal;
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown(0);
+        }
     }
 }

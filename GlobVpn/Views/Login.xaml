@@ -35,29 +35,6 @@
                         Offset=".8"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Border Grid.Row="0"
-                Panel.ZIndex="1"
-                HorizontalAlignment="Right">
-            <Viewbox Height="40">
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="ButtonMinimize"
-                            Click="ButtonMinimize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Minimize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonMaximize"
-                            Click="ButtonMaximize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Maximize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonClose"
-                            Click="ButtonClose_Click"
-                            Margin="20 0 30 0"
-                            Tag="{StaticResource Close}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                </StackPanel>
-            </Viewbox>
-        </Border>
         <Border Grid.RowSpan="2">
             <Border.Background>
                 <ImageBrush Stretch="UniformToFill"

@@ -13,7 +13,6 @@
     <Page.Resources>
         <ResourceDictionary Source="Resources/LayoutResources.xaml"/>
     </Page.Resources>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -21,17 +20,11 @@
             <ColumnDefinition
                 Width="76*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
-        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill"
                             ImageSource="{StaticResource MainWindowBackground}"/>
         </Grid.Background>
         <Border Grid.Column="0"
-                Grid.Row="0"
-                Grid.RowSpan="3"
                 Margin="0 5 0 0"
                 CornerRadius="0 80 0 0">
             <Border.Background>
@@ -138,35 +131,9 @@
                 </Viewbox>
             </Grid>
         </Border>
-        <Border Grid.Row="0"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                HorizontalAlignment="Right"
-                Panel.ZIndex="1">
-            <Viewbox Height="40">
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="ButtonMinimize"
-                            Click="ButtonMinimize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Minimize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonMaximize"
-                            Click="ButtonMaximize_Click"
-                            Margin="20 0"
-                            Tag="{StaticResource Maximize}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                    <Button x:Name="ButtonClose"
-                            Click="ButtonClose_Click"
-                            Margin="20 0 30 0"
-                            Tag="{StaticResource Close}"
-                            Style="{DynamicResource WindowStateButton}"/>
-                </StackPanel>
-            </Viewbox>
-        </Border>
         <Frame
             x:Name="FrameContent"
             x:FieldModifier="private"
-            Grid.Column="1"
-            Grid.RowSpan="2"/>
+            Grid.Column="1"/>
     </Grid>
 </Page>
