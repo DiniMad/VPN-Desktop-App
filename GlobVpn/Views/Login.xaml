@@ -81,7 +81,7 @@
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                ap:InputIcon.Icon="{StaticResource UserInput}"
+                                ap:ElementIcon.Icon="{StaticResource UserInput}"
                                 ap:TexBoxPlaceHolder.PlaceHolder="Email Or Phone Number"
                                 Style="{StaticResource FormInput}"/>
                             <PasswordBox
@@ -90,7 +90,7 @@
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                ap:InputIcon.Icon="{StaticResource Lock}"
+                                ap:ElementIcon.Icon="{StaticResource Lock}"
                                 ap:TexBoxPlaceHolder.PlaceHolder="Password"  
                                 Style="{DynamicResource FormInputPassword}"/>
                             <CheckBox

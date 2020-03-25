@@ -20,7 +20,7 @@
                     <Border Background="{DynamicResource DarkWhiteGrayBrush}"
                             CornerRadius="10"
                             Padding="15">
-                        <Image Source="{TemplateBinding ap:InputIcon.Icon}"/>
+                        <Image Source="{TemplateBinding ap:ElementIcon.Icon}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">

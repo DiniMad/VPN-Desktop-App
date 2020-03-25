@@ -36,17 +36,17 @@
                     <Button x:Name="ButtonMinimize"
                             Click="ButtonMinimize_Click"
                             Margin="20 0"
-                            ap:InputIcon.Icon="{StaticResource Minimize}"
+                            ap:ElementIcon.Icon="{StaticResource Minimize}"
                             Style="{DynamicResource WindowStateButton}"/>
                     <Button x:Name="ButtonMaximize"
                             Click="ButtonMaximize_Click"
                             Margin="20 0"
-                            ap:InputIcon.Icon="{StaticResource Maximize}"
+                            ap:ElementIcon.Icon="{StaticResource Maximize}"
                             Style="{DynamicResource WindowStateButton}"/>
                     <Button x:Name="ButtonClose"
                             Click="ButtonClose_Click"
                             Margin="20 0 30 0"
-                            ap:InputIcon.Icon="{StaticResource Close}"
+                            ap:ElementIcon.Icon="{StaticResource Close}"
                             Style="{DynamicResource WindowStateButton}"/>
                 </StackPanel>
             </Viewbox>

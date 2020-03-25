@@ -79,7 +79,7 @@
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                ap:InputIcon.Icon="{StaticResource UserInput}"
+                                ap:ElementIcon.Icon="{StaticResource UserInput}"
                                 ap:TexBoxPlaceHolder.PlaceHolder="Emile Or Phone Number"
                                 Style="{StaticResource FormInput}"/>
                             <PasswordBox
@@ -88,7 +88,7 @@
                                 FontSize="5"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteDarkGrayBrush}"
-                                ap:InputIcon.Icon="{StaticResource Lock}"
+                                ap:ElementIcon.Icon="{StaticResource Lock}"
                                 ap:TexBoxPlaceHolder.PlaceHolder="Password"
                                 Style="{StaticResource FormInputPassword}"/>
                             <PasswordBox
@@ -97,7 +97,7 @@
                                 Margin="-15 5 10 0"
                                 Height="14"
                                 FontSize="5"
-                                ap:InputIcon.Icon="{StaticResource Lock}"
+                                ap:ElementIcon.Icon="{StaticResource Lock}"
                                 ap:TexBoxPlaceHolder.PlaceHolder="Retry Password"
                                 Style="{StaticResource FormInputPassword}"/>
                             <Button
