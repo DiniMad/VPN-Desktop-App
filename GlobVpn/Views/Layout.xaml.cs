@@ -27,6 +27,8 @@ namespace GlobVpn.Views
         {
             set
             {
+                if (FrameContent.Content.GetType().Name == value.ToString())
+                    return;
                 Page newPage;
                 switch (value)
                 {
@@ -39,10 +41,15 @@ namespace GlobVpn.Views
                     default:
                         throw new AggregateException();
                 }
+                if (IsFrameAnimationRunning)
+                    return;
                 var frameActions=new FrameAnimation(FrameContent,.8);
+                frameActions.AnimationCompleted += (sender, e) => IsFrameAnimationRunning = false;
+                IsFrameAnimationRunning = true;
                 frameActions.ChangeFrameContentWithAnimation(newPage);
             }
         }
+        private bool IsFrameAnimationRunning { get; set; }
         public Layout()
         {
             InitializeComponent();
@@ -60,6 +67,6 @@ namespace GlobVpn.Views
         {
             ApplicationActions.ChangeTheme();
         }
-      
+
     }
 }
