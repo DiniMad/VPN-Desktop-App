@@ -80,6 +80,7 @@
     <Compile Include="Views\SubscribePlans.xaml.cs">
       <DependentUpon>SubscribePlans.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Utilities\ApplicationActions.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
