@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GlobVpn.Views.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -92,12 +93,12 @@ namespace GlobVpn.Views
         }
         private void ButtonChangeTheme_Click(object sender, RoutedEventArgs e)
         {
-            ((App)Application.Current).ChangeTheme();
+            ApplicationActions.ChangeTheme();
         }
 
         private void ButtonFeedBack_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Window).SetContent = WindowContent.SubscribePlans;
+            ApplicationActions.SetContent(WindowContent.SubscribePlans);
         }
     }
 }

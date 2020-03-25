@@ -1,3 +1,4 @@
+using GlobVpn.Views.Utilities;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -32,12 +33,12 @@ namespace GlobVpn.Views
         }
         private void ButtonRegister_OnClick(object sender, RoutedEventArgs e)
         {
-            ((MainWindow) Window).SetContent = MainWindow.WindowContent.PrimaryPanel;
+            ApplicationActions.SetContent(WindowContent.PrimaryPanel);
         }
 
         private void ButtonGoToLogin_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow) Window).SetContent = MainWindow.WindowContent.Login;
+            ApplicationActions.SetContent(WindowContent.Login);
         }
     }
 }

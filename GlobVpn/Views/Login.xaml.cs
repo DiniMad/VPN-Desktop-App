@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GlobVpn.Views.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,12 +49,12 @@ namespace GlobVpn.Views
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Window).SetContent = MainWindow.WindowContent.PrimaryPanel;
+            ApplicationActions.SetContent(WindowContent.PrimaryPanel);
         }
 
         private void ButtonGoToSignUp_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Window).SetContent = MainWindow.WindowContent.Register;
+            ApplicationActions.SetContent(WindowContent.Register);
         }
     }
 }
