@@ -94,7 +94,7 @@
                             BorderThickness="0"
                             Foreground="{DynamicResource BlackWhiteBrush}"
                             Click="ButtonEditPlay_OnClick"
-                            Content="wrong order? Edit" Style="{DynamicResource ButtonWithoutHovor}"/>
+                            Content="wrong order? Edit" Style="{DynamicResource RoundedButton}"/>
                         <ItemsControl 
                             x:Name="ItemsControl1"
                             Grid.Row="2"
