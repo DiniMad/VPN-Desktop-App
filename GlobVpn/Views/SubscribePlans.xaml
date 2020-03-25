@@ -19,10 +19,6 @@
             <RowDefinition Height="1.8*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush Stretch="UniformToFill"
-                            ImageSource="{StaticResource MainWindowBackground}"/>
-        </Grid.Background>
         <Viewbox Grid.Row="0">
             <Image Source="{StaticResource HeadImage}"/>
         </Viewbox>
