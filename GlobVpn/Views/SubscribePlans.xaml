@@ -29,7 +29,7 @@
         <Viewbox Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <uc:SubscribePlanItem
-                    x:Name="YearPlane"
+                    x:Name="OneMonthPlan"
                     Margin="5"
                     Height="90"
                     Width="50"
@@ -40,38 +40,38 @@
                     DollarPrice="25"
                     RialPrice="60"/>
                 <uc:SubscribePlanItem
-                    x:Name="YearPlane2"
-                Margin="5"
-                Height="90"
-                Width="50"
-                    BoxBackground="#716C9F"
-                Icon="{StaticResource Chick}"
+                    x:Name="ThreeMonthsPlan"
+                    Margin="5"
+                    Height="90"
+                    Width="50"
+                    BoxBackground="#3F3A68"
+                    Icon="{StaticResource Chick}"
                     PlanDurationInMonth="3"
                     GiftDurationInMonth="2"
-                DollarPrice="5"
-                RialPrice="6"/>
+                    DollarPrice="5"
+                    RialPrice="6"/>
                 <uc:SubscribePlanItem
-                    x:Name="YearPlane3"
-                Margin="5"
-                Height="90"
-                Width="50"
-                    BoxBackground="#3F3A68"
-                Icon="{StaticResource Turkey}"
+                    x:Name="SixMonthsPlan"
+                    Margin="5"
+                    Height="90"
+                    Width="50"
+                    BoxBackground="#716C9F"
+                    Icon="{StaticResource Turkey}"
                     PlanDurationInMonth="6"
                     GiftDurationInMonth="3"
-                DollarPrice="25"
-                RialPrice="60"/>
+                    DollarPrice="25"
+                    RialPrice="60"/>
                 <uc:SubscribePlanItem
-                    x:Name="YearPlane4"
-                Margin="5"
-                Height="90"
-                Width="50"
+                    x:Name="TwelveMonthsPlan"
+                    Margin="5"
+                    Height="90"
+                    Width="50"
                     BoxBackground="#716C9F"
-                Icon="{StaticResource Peacock}"
+                    Icon="{StaticResource Peacock}"
                     PlanDurationInMonth="12"
                     GiftDurationInMonth="4"
-                DollarPrice="25"
-                RialPrice="60"/>
+                    DollarPrice="25"
+                    RialPrice="60"/>
             </StackPanel>
         </Viewbox>
     </Grid>

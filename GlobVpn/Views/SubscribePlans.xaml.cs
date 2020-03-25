@@ -25,15 +25,14 @@ namespace GlobVpn.Views
         {
             InitializeComponent();
 
-            // TODO: Different plans should bind to different methods
-            YearPlane.ButtonBuyClick = Button_Click;
-            YearPlane2.ButtonBuyClick = Button_Click;
-            YearPlane3.ButtonBuyClick = Button_Click;
-            YearPlane4.ButtonBuyClick = Button_Click;
+            OneMonthPlan.ButtonBuyClick = ButtonBuy_Click;
+            ThreeMonthsPlan.ButtonBuyClick = ButtonBuy_Click;
+            SixMonthsPlan.ButtonBuyClick = ButtonBuy_Click;
+            TwelveMonthsPlan.ButtonBuyClick = ButtonBuy_Click;
         }
         public Action<object, RoutedEventArgs> ButtonBuyClick { get; set; }
 
-        private void Button_Click(object sender, RoutedEventArgs e, int planTitle, int dolarPrice, int rialPrice)
+        private void ButtonBuy_Click(object sender, RoutedEventArgs e, int planTitle, int dolarPrice, int rialPrice)
         {
             ApplicationActions.SetModalContent(new CheckOut(planTitle, dolarPrice, rialPrice));
         }
