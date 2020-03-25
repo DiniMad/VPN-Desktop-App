@@ -28,10 +28,6 @@ namespace GlobVpn.Views
             InitializeComponent();
         }
 
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Window.DragMove();
-        }
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
             Window.WindowState = WindowState.Minimized;

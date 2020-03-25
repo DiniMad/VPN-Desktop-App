@@ -15,7 +15,7 @@
     <Page.Resources>
         <ResourceDictionary Source="Resources/LoginAndRegisterResources.xaml" />
     </Page.Resources>
-    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
