@@ -13,6 +13,22 @@
     <BitmapImage x:Key="Minimize" UriSource="Images/Minimize.png" />
     <BitmapImage x:Key="MainWindowBackground" UriSource="Images/MainWindowBackground.png" />
 
+    <Style x:Key="InsideTextBoxOfPlaceHolderTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <ScrollViewer
+                        x:Name="PART_ContentHost" 
+                        Focusable="false" 
+                        HorizontalScrollBarVisibility="Hidden" 
+                        VerticalScrollBarVisibility="Hidden"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <Style x:Key="RoundedButton" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>

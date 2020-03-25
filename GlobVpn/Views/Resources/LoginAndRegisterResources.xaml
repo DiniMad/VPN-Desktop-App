@@ -18,22 +18,6 @@
     <BitmapImage x:Key="Google" UriSource="Images/Google.png" />
     <BitmapImage x:Key="FaceBook" UriSource="Images/FaceBook.png" />
 
-    <Style x:Key="InsideTextBoxOfPlaceHolderTextBox" TargetType="{x:Type TextBox}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
-                    <ScrollViewer
-                        x:Name="PART_ContentHost" 
-                        Focusable="false" 
-                        HorizontalScrollBarVisibility="Hidden" 
-                        VerticalScrollBarVisibility="Hidden"/>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsEnabled" Value="false"/>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     <Style x:Key="FormInput" TargetType="{x:Type TextBox}">
         <Setter Property="Cursor" Value="IBeam"/>
         <Setter Property="Template">
