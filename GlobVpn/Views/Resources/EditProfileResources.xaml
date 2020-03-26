@@ -8,7 +8,7 @@
     <BitmapImage x:Key="Chick" UriSource="Images/Chick.png" />
     <BitmapImage x:Key="Turkey" UriSource="Images/Turkey.png" />
     <BitmapImage x:Key="Peacock" UriSource="Images/Peacock.png" />
-    <BitmapImage x:Key="PremiumLogo" UriSource="Images/PremiumLogo.png" /> 
+    <BitmapImage x:Key="PremiumLogo" UriSource="Images/PremiumLogo.png" />
 
     <Style x:Key="InputPassword" TargetType="{x:Type PasswordBox}">
         <Setter Property="ap:PasswordBoxMonitor.IsMonitoring" Value="True"/>

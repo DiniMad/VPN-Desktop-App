@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace GlobVpn.Views
 {
     /// <summary>
-    /// Interaction logic for Settings.xaml
+    /// Interaction logic for EditProfile.xaml
     /// </summary>
-    public partial class Settings : Page
+    public partial class EditProfile : Page
     {
-        public Settings()
+        public EditProfile()
         {
             InitializeComponent();
         }
