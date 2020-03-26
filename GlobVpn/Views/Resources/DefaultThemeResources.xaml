@@ -9,7 +9,7 @@
     <Color x:Key="Purple">#392552</Color>
     <Color x:Key="PrimaryMenuLeft">#42036e</Color>
     <Color x:Key="PrimaryMenuRight">#6200a0</Color>
-
+    <Color x:Key="VeryDarkWhiteDarkGray">#D7D7D7</Color>
 
     <SolidColorBrush x:Key="WhiteBlackBrush" Color="{DynamicResource WhiteBlack}"/>
     <SolidColorBrush x:Key="WhiteDarkGrayBrush" Color="{DynamicResource WhiteBlack}"/>
@@ -17,7 +17,8 @@
     <SolidColorBrush x:Key="DarkWhiteGrayBrush" Color="{DynamicResource DarkWhiteGray}"/>
     <SolidColorBrush x:Key="WhiteGrayBrush" Color="{DynamicResource WhiteBlack}"/>
     <SolidColorBrush x:Key="BlackWhiteBrush" Color="{DynamicResource BlackWhite}"/>
-
+    <SolidColorBrush x:Key="VeryDarkWhiteDarkGrayBrush" Color="{StaticResource VeryDarkWhiteDarkGray}"/>
+    <SolidColorBrush x:Key="VeryDarkWhiteBlackBrush" Color="{DynamicResource VeryDarkWhiteDarkGray}"/>
 
     <BitmapImage x:Key="MidleBoxBackground" UriSource="Images/MidleBoxBackGround.png" />
     <BitmapImage x:Key="Lamp" UriSource="Images/Lamp.png" />

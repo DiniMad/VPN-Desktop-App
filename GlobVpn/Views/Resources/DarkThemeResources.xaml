@@ -8,7 +8,7 @@
     <Color x:Key="DarkWhiteGray">#FF686868</Color>
     <Color x:Key="BlackWhite">#fff</Color>
     <Color x:Key="PrimaryMenuLeft">#392552</Color>
-    <Color x:Key="PrimaryMenuRight">#FF45256E</Color> 
+    <Color x:Key="PrimaryMenuRight">#FF45256E</Color>
 
     <SolidColorBrush x:Key="WhiteBlackBrush" Color="{DynamicResource WhiteBlack}"/>
     <SolidColorBrush x:Key="WhiteDarkGrayBrush" Color="{DynamicResource WhiteDarkGray}"/>
@@ -16,6 +16,8 @@
     <SolidColorBrush x:Key="DarkWhiteGrayBrush" Color="{DynamicResource DarkWhiteGray}"/>
     <SolidColorBrush x:Key="WhiteGrayBrush" Color="{DynamicResource DarkWhiteGray}"/>
     <SolidColorBrush x:Key="BlackWhiteBrush" Color="{DynamicResource BlackWhite}"/>
+    <SolidColorBrush x:Key="VeryDarkWhiteDarkGrayBrush" Color="{DynamicResource WhiteDarkGray}"/>
+    <SolidColorBrush x:Key="VeryDarkWhiteBlackBrush" Color="{DynamicResource WhiteBlack}"/> 
 
     <BitmapImage x:Key="MidleBoxBackground" UriSource="Images/MidleBoxBackGroundDark.png" />
     <BitmapImage x:Key="Lamp" UriSource="Images/LampDark.png" />
