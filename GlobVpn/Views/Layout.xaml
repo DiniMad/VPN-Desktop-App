@@ -93,8 +93,10 @@
                             ap:ElementIcon.Icon="{StaticResource Home}"
                             Style="{DynamicResource MainManuButton}"/>
                         <Button 
+                            x:Name="ButtonEditProfile"
                             Content="Edit Profile"
                             ap:ElementIcon.Icon="{StaticResource EditProfile}"
+                            Click="ButtonEditProfile_Click"
                             Style="{DynamicResource MainManuButton}"/>
                         <Button
                             Content="Setting"

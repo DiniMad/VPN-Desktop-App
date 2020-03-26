@@ -1,4 +1,4 @@
-using GlobVpn.Views.Utilities;
+﻿using GlobVpn.Views.Utilities;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,6 +51,10 @@ namespace GlobVpn.Views
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
             ApplicationActions.SetContent(WindowContent.PrimaryPanel);
+        }
+        private void ButtonEditProfile_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationActions.SetContent(WindowContent.EditProfile);
         }
         private void ButtonFeedBack_Click(object sender, RoutedEventArgs e)
         {
