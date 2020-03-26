@@ -1,4 +1,4 @@
-﻿using GlobVpn.Views.Utilities;
+using GlobVpn.Views.Utilities;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +27,9 @@ namespace GlobVpn.Views
                         break;
                     case WindowContent.FeedBack:
                         newPage = new FeedBack();
+                        break;
+                    case WindowContent.EditProfile:
+                        newPage = new EditProfile();
                         break;
                     default:
                         throw new AggregateException();

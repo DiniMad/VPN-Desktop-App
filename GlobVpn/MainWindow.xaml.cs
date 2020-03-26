@@ -48,6 +48,7 @@ namespace GlobVpn
                         }
                     case WindowContent.SubscribePlans:
                     case WindowContent.FeedBack:
+                    case WindowContent.EditProfile:
                         ((Layout) FrameContent.Content).SetContent = value;
                         return;
                     default:

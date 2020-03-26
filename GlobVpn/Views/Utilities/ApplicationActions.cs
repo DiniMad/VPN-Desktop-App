@@ -10,6 +10,7 @@ namespace GlobVpn.Views.Utilities
         PrimaryPanel,
         SubscribePlans,
         FeedBack,
+        EditProfile,
     }
 
     internal static class ApplicationActions
