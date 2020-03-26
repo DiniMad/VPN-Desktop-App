@@ -82,6 +82,9 @@
     <Compile Include="Views\PrimaryPanel.xaml.cs">
       <DependentUpon>PrimaryPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SubscribePlans.xaml.cs">
       <DependentUpon>SubscribePlans.xaml</DependentUpon>
     </Compile>
@@ -149,11 +152,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Resources\SettingsResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Resources\SubscribePlansResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Resources\User Controls\SubscribePlanItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -249,6 +260,9 @@
   <ItemGroup>
     <Resource Include="Views\Resources\Images\StarFill.png" />
     <Resource Include="Views\Resources\Images\StarEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\PremiumLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
