@@ -20,14 +20,14 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0"
-                 Margin="5">
+                 Margin="20">
             <Image Source="{StaticResource HeadImage}"/>
         </Viewbox>
         <Viewbox
             Grid.Row="1">
             <StackPanel
                 Height="100"
-                Width="150">
+                Width="120">
                 <TextBlock
                     FontSize="8"
                     VerticalAlignment="Center"
