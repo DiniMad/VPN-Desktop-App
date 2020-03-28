@@ -19,43 +19,44 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <Viewbox
+        <Grid
+            VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Viewbox
             Grid.RowSpan="2"
             Margin="0 25 0 10"
             Panel.ZIndex="1">
-            <Border
+                <Border
                 Height="100"
                 Width="100"
                 Padding="8"
                 CornerRadius="50"
                 Background="{DynamicResource DarkWhiteGrayBrush}">
-                <Image Source="{StaticResource UserAvatar}"/>
-            </Border>
-        </Viewbox>
-        <Viewbox
+                    <Image Source="{StaticResource UserAvatar}"/>
+                </Border>
+            </Viewbox>
+            <Viewbox
             Grid.Row="1"
             Grid.RowSpan="2"
             VerticalAlignment="Top">
-            <Border
+                <Border
                 Height="120"
                 Width="100"
                 Margin="5 0"
                 Padding="0 22 0 0"
                 CornerRadius="10"
                 Background="{DynamicResource DarkWhiteBlackBrush}">
-                <StackPanel>
-                    <TextBlock
+                    <StackPanel>
+                        <TextBlock
                         FontSize="4"
                         Foreground="{DynamicResource BlackWhiteBrush}"
                         HorizontalAlignment="Center"
                         Text="samane@gmail.com"/>
-                    <Button
+                        <Button
                         FontSize="4"
                         FontWeight="SemiBold"
                         Content="Change Photo"
@@ -64,64 +65,64 @@
                          Foreground="{DynamicResource BlackWhiteBrush}"
                         Background="Transparent"
                         Style="{StaticResource RoundedButton}"/>
-                    <Grid
+                        <Grid
                         Height="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1.2*"/>
-                            <ColumnDefinition Width="1.5*"/>
-                            <ColumnDefinition Width=".9*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="1.5*"/>
+                                <ColumnDefinition Width=".9*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
                             FontSize="6"
                             FontWeight="Bold"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                              Foreground="{DynamicResource BlackWhiteBrush}"
                             Text="Your Plan:"/>
-                        <StackPanel
+                            <StackPanel
                             Grid.Column="1"
                             Margin="2 0"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center">
-                            <Image
+                                <Image
                                 Height="5"
                                 Width="5"
                                 Source="{StaticResource Egg}"/>
-                            <TextBlock
+                                <TextBlock
                                 FontSize="6"
                                 FontWeight="Bold"  
                                 Margin="2 0 0 0"
                                 VerticalAlignment="Center"
                                  Foreground="{DynamicResource BlackWhiteBrush}"
                                 Text="12 Months"/>
-                        </StackPanel>
-                        <StackPanel
+                            </StackPanel>
+                            <StackPanel
                             Grid.Column="2"
                             Margin="2 0"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center">
-                            <TextBlock
+                                <TextBlock
                                 FontSize="6"
                                 FontWeight="Bold"   
                                 VerticalAlignment="Center"
                                  Foreground="{DynamicResource BlackWhiteBrush}"
                                 Text="3"/>
-                            <TextBlock
+                                <TextBlock
                                 FontSize="3"
                                 FontWeight="SemiBold"
                                 Margin="2"
                                 VerticalAlignment="Center"
                                  Foreground="{DynamicResource BlackWhiteBrush}"
                                 Text="Days"/>
-                        </StackPanel>
-                    </Grid>
-                    <Border
+                            </StackPanel>
+                        </Grid>
+                        <Border
                         Height="56"
                         Margin="8"
                         CornerRadius="5"
                         Background="{DynamicResource VeryDarkWhiteDarkGrayBrush}">
-                        <StackPanel>
-                            <PasswordBox
+                            <StackPanel>
+                                <PasswordBox
                                 FontSize="5"
                                 Margin="2 2 2 5"
                                 Height="10"
@@ -129,7 +130,7 @@ ap:TexBoxPlaceHolder.PlaceHolder="Past Password"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteBlackBrush}"
                                 Style="{StaticResource InputPassword}"/>
-                            <PasswordBox
+                                <PasswordBox
                                 FontSize="5"
                                 Margin="2 1 2 2"
                                 Height="10"
@@ -137,7 +138,7 @@ ap:TexBoxPlaceHolder.PlaceHolder="New Password"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteBlackBrush}"
                                 Style="{StaticResource InputPassword}"/>
-                            <PasswordBox
+                                <PasswordBox
                                 FontSize="5"
                                 Margin="2 0 2 2"
                                 Height="10"
@@ -145,7 +146,7 @@ ap:TexBoxPlaceHolder.PlaceHolder="Re New Password"
                                 Foreground="{DynamicResource BlackWhiteBrush}"
                                 Background="{DynamicResource WhiteBlackBrush}"
                                 Style="{StaticResource InputPassword}"/>
-                            <Button
+                                <Button
                                 FontSize="5"
                                 Content="Submit"
                                 Height="10"
@@ -156,25 +157,12 @@ ap:TexBoxPlaceHolder.PlaceHolder="Re New Password"
                                 ap:ButtonRadius.Radius="5"
                                 HorizontalAlignment="Left"
                                 Style="{StaticResource RoundedButton}"/>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
-            </Border>
-        </Viewbox>
-        <Viewbox
-            Grid.Row="3">
-            <Button
-                FontSize="4"
-                FontWeight="SemiBold"
-                Height="10"
-                Width="60"
-                Margin="4"
-                Foreground="red"
-                Background="{DynamicResource VeryDarkWhiteBlackBrush}"
-                Content="Logout This Account"
-                ap:ButtonRadius.Radius="4"
-                Style="{StaticResource RoundedButton}"/>
-        </Viewbox>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </Viewbox>
+        </Grid>
         <Viewbox
             Grid.Column="1"
             Grid.RowSpan="4">
