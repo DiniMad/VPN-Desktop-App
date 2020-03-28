@@ -11,4 +11,69 @@
     <BitmapImage x:Key="StarEmpty" UriSource="Images/StarEmpty.png" />
     <BitmapImage x:Key="StarFill" UriSource="Images/StarFill.png" />
 
+    <Style x:Key="TextBoxWithPlaceHolder" TargetType="{x:Type TextBox}">
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border 
+                                BorderBrush="{DynamicResource BlackWhiteBrush}"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="5">
+                        <Border.Effect>
+                            <DropShadowEffect 
+                                        ShadowDepth="0"
+                                        BlurRadius="2"
+                                        Color="{DynamicResource BlackWhite}"/>
+                        </Border.Effect>
+                        <Grid
+                                        Margin="2 1">
+                            <TextBox
+                                        Text="{Binding Path=Text,
+                                        RelativeSource={RelativeSource TemplatedParent},
+                                        Mode=TwoWay,
+                                        UpdateSourceTrigger=PropertyChanged}"
+                                        x:Name="textSource"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        Background="Transparent"
+                                        Panel.ZIndex="2"
+                                        TextWrapping="{TemplateBinding TextWrapping}"
+                                        AcceptsReturn="{TemplateBinding AcceptsReturn}"
+                                        Style="{StaticResource InsideTextBoxOfPlaceHolderTextBox}"/>
+                            <TextBox 
+                                        Text="{TemplateBinding ap:TexBoxPlaceHolder.PlaceHolder}"
+                                        Background="{TemplateBinding Background}"
+                                        IsEnabled="False"
+                                        BorderThickness="0"
+                                        Panel.ZIndex="1">
+                                <TextBox.Style>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                    <Condition Property="IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
