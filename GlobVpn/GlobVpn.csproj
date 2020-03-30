@@ -264,5 +264,11 @@
   <ItemGroup>
     <Resource Include="Views\Resources\Images\PremiumLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\US-Flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Resources\Images\UK-Flag.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
