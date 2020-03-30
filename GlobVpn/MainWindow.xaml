@@ -10,7 +10,7 @@
     Height="600"
     Width="1050"
     MinHeight="450"
-    MinWidth="800"
+    MinWidth="1020"
     WindowStyle="None"
     WindowStartupLocation="CenterScreen"
     AllowsTransparency="True">
