@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GlobVpn.Views.Resources.Attached_Properties;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -10,7 +11,25 @@ namespace GlobVpn.Views
     /// </summary>
     public partial class PrimaryPanel : Page
     {
-        public bool IsServersPanelExpanded { get; set; }
+        private bool isServersPanelExpanded;
+
+        public bool IsServersPanelExpanded
+        {
+            get { return isServersPanelExpanded; }
+            set
+            {
+                var heightAnimation=new DoubleAnimation()
+                {
+                    To=value?100:14,
+                    Duration=TimeSpan.FromSeconds(.25)
+                };
+                BorderServersContainer.BeginAnimation(HeightProperty, heightAnimation);
+
+                ButtonExpandServers.Content = value ? "X" : "V";
+
+                isServersPanelExpanded = value;
+            }
+        }
         public PrimaryPanel()
         {
             InitializeComponent();
@@ -18,16 +37,18 @@ namespace GlobVpn.Views
 
         private void ButtonExpandServers_Click(object sender, RoutedEventArgs e)
         {
-            var heightAnimation=new DoubleAnimation()
-            {
-                To=IsServersPanelExpanded?13:100,
-                Duration=TimeSpan.FromSeconds(.25)
-            };
-            BorderServersContainer.BeginAnimation(HeightProperty, heightAnimation);
-
-            ButtonExpandServers.Content = IsServersPanelExpanded ? "V" : "X";
-
             IsServersPanelExpanded = !IsServersPanelExpanded;
+        }
+
+        private void ButtonSelectServerClicked(object sender, RoutedEventArgs e)
+        {
+            var selectedButton=(Button) sender;
+            var selectedButtonIcon=ElementIcon.GetIcon(selectedButton);
+
+            ElementIcon.SetIcon(ButtonSelectedServer, selectedButtonIcon);
+            ButtonSelectedServer.Content = selectedButton.Content;
+
+            IsServersPanelExpanded = false;
         }
     }
 }
